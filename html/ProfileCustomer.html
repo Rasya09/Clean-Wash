@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clean Wash - Profil Saya</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" />
+    <link rel="stylesheet" href="../CSS/ProfileCustomer.css" />
+</head>
+<body>
+    <div class="layout">
+        <aside class="sidebar">
+            <div class="profile-card">
+                <div class="profile-banner"></div>
+                <div class="profile-avatar">
+                    <img src="../Assets/Icon/Avatar.png" alt="Avatar" />
+                </div>
+                <div class="profile-info">
+                    <h3 class="profile-name">Rizky Pratama</h3>
+                    <p class="profile-email">rizky@example.com</p>
+                    <span class="profile-badge">Customer Aktif</span>
+                </div>
+                <button class="hamburger" onclick="toggleNav()" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+
+            <nav class="sidebar-nav" id="sidebar-nav">
+                <a href="#" class="nav-item active">Profil Saya</a>
+                <a href="#" class="nav-item">Alamat Saya</a>
+                <a href="#" class="nav-item">Riwayat Pesanan</a>
+                <a href="#" class="nav-item">Keamanan Akun</a>
+                <a href="#" class="nav-item logout">Logout</a>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <div class="content-header">
+                <h1 class="page-title">Profil Saya</h1>
+                <p class="page-desc">Kelola informasi akun Anda untuk pengalaman laundry yang lebih mudah.</p>
+            </div>
+
+            <div class="content-body">
+
+                <section class="info-section">
+                    <h2 class="section-title">Informasi Pribadi</h2>
+
+                    <div class="form-group">
+                        <label>Nama Lengkap</label>
+                        <input type="text" value="Rizky Pratama" />
+                    </div>
+
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="email" value="rizky@example.com" />
+                    </div>
+
+                    <div class="form-group">
+                        <label>Nomor HP</label>
+                        <input type="tel" value="+62 812-3456-7890" />
+                    </div>
+
+                    <div class="form-group">
+                        <label>Tanggal Lahir</label>
+                        <input type="text" value="10/05/1995" />
+                    </div>
+
+                    <div class="form-group">
+                        <label>Jenis Kelamin</label>
+                        <div class="radio-group">
+                            <label class="radio-label">
+                                <input type="radio" name="gender" checked /> Laki-Laki
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" name="gender" /> Perempuan
+                            </label>
+                        </div>
+                    </div>
+
+                    <button class="btn-edit">Edit Data</button>
+                </section>
+
+                <div class="right-column">
+                    <section class="address-section">
+                        <div class="section-title-row">
+                            <img src="../Assets/Icon/home icon.png" alt="" class="section-icon" />
+                            <h2 class="section-title">Alamat Tersimpan</h2>
+                        </div>
+
+                        <div class="address-list">
+                            <div class="address-item">
+                                <img src="../Assets/Icon/Location Icon.png" alt="" class="pin-icon" />
+                                <div>
+                                    <p class="address-name">Alamat Utama</p>
+                                    <p class="address-detail">Jl. Soekarno Hatta No.12, Bandar Lampung</p>
+                                </div>
+                            </div>
+
+                            <div class="address-item">
+                                <img src="../Assets/Icon/Location Icon.png" alt="" class="pin-icon" />
+                                <div>
+                                    <p class="address-name">Alamat Kos / Rumah</p>
+                                    <p class="address-detail">Jl. Melati No. 5, Kedaton, Bandar Lampung</p>
+                                </div>
+                            </div>
+
+                            <button class="btn-tambah">
+                                <svg class="icon-plus" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M5 12H19"/>
+                                <path d="M12 5V19"/>
+                            </svg>
+                                Tambah Alamat
+                            </button>
+                        </div>
+                    </section>
+
+                    <section class="order-section">
+                        <div class="section-title-row">
+                            <img src="../Assets/Icon/keranjang icon.png" alt="" class="section-icon" />
+                            <h2 class="section-title">Ringkasan Pesanan</h2>
+                        </div>
+
+                        <div class="order-summary">
+                            <div class="order-stat">
+                                <span class="stat-number">12</span>
+                                <span class="stat-label">Pesanan</span>
+                            </div>
+                            <div class="order-stat">
+                                <span class="stat-number">9</span>
+                                <span class="stat-label">Selesai</span>
+                            </div>
+                            <div class="order-stat">
+                                <span class="stat-number">3</span>
+                                <span class="stat-label">Diproses</span>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+            </div>
+        </main>
+
+    </div>
+
+    <script>
+        function toggleNav() {
+            const nav = document.getElementById('sidebar-nav');
+            nav.classList.toggle('open');
+        }
+    </script>
+</body>
+</html>
