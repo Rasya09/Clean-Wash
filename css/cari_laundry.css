@@ -30,6 +30,7 @@ body {
     width: 100%;
     background-color: #ffffff;
     padding: 20px 0;
+    z-index: 1;
 }
 
 .nav-wrapper {
@@ -597,4 +598,168 @@ body {
     color: #333;
     min-width: 40px;
     text-align: center;
+}
+
+/* Footer */
+.footer {
+    background-color: #fff;
+    margin-top: 0;
+    box-shadow: 0 2px 16px rgba(0, 0, 0, 0.1);
+    
+}
+ 
+.footer-top {
+    display: flex;
+    align-items: flex-start;
+    gap: 48px;
+    padding: 48px 0 40px;
+}
+ 
+/* Brand */
+.footer-brand {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+ 
+.footer-brand__logo {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+ 
+.footer-brand__logo img {
+    width: 64px;
+    height: 64px;
+    object-fit: contain;
+}
+ 
+.footer-brand__name {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+}
+ 
+.footer-brand__cw {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--color-primary);
+}
+ 
+.footer-brand__cleanwash {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--color-primary);
+}
+ 
+.footer-brand__desc {
+    font-size: 14px;
+    color: #444;
+    line-height: 1.7;
+    max-width: 320px;
+}
+ 
+/* Divider vertikal */
+.footer-divider {
+    width: 1px;
+    align-self: stretch;
+    background-color: rgba(0, 0, 0, 0.15);
+}
+ 
+/* Kontak */
+.footer-contact {
+    flex: 1.5;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+ 
+.footer-col__title {
+    font-size: 16px;
+    font-weight: 700;
+    color: #111;
+}
+ 
+.footer-contact__item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    color: #333;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+ 
+.footer-contact__item:hover {
+    color: var(--color-primary);
+}
+ 
+/* Sosial Media */
+.footer-social {
+    flex: 1.5;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+ 
+.footer-social__icons {
+    display: flex;
+    gap: 12px;
+}
+ 
+.footer-social__icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: #2d2d2d;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: background-color 0.2s, transform 0.2s;
+}
+ 
+.footer-social__icon:hover {
+    background-color: var(--color-primary);
+    transform: translateY(-2px);
+}
+ 
+/* Bottom bar */
+.footer-bottom {
+    border-top: 1px solid rgba(0, 0, 0, 0.15);
+    padding: 18px 0;
+}
+ 
+.footer-bottom__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+ 
+.footer-bottom__copy {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #111;
+}
+ 
+.footer-bottom__links {
+    display: flex;
+    gap: 40px;
+}
+ 
+.footer-bottom__links a {
+    font-size: 14px;
+    font-weight: 600;
+    color: #111;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+ 
+.footer-bottom__links a:hover {
+    color: var(--color-primary);
 }

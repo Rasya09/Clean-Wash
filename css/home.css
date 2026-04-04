@@ -30,6 +30,8 @@ body {
     width: 100%;
     background-color: #ffffff;
     padding: 20px 0;
+    box-shadow: 0 2px 16px rgba(0, 0, 0, 0.1);
+    z-index: 1;
 }
 
 .nav-wrapper {
@@ -820,8 +822,9 @@ body {
 
 /* Footer */
 .footer {
-    background-color: #c5cef0;
+    background-color: #fff;
     margin-top: 0;
+    box-shadow: 0 2px 16px rgba(0, 0, 0, 0.1);
 }
  
 .footer-top {
