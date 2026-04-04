@@ -2,12 +2,9 @@ document.addEventListener('DOMContentLoaded', function () {
     const btnLanjutkan = document.querySelector('.action-section .btn-primary');
     const paymentModal = document.getElementById('payment-modal');
     const closeModalBtn = document.getElementById('close-modal');
-
-    // New selections for Success Modal
     const successModal = document.getElementById('success-modal');
     const btnKonfirmasiOnline = document.getElementById('btn-confirm-online');
     const btnBackHome = document.getElementById('btn-back-home');
-
     const successMethodText = document.getElementById('success-method');
     const successDescText = document.getElementById('success-desc');
 

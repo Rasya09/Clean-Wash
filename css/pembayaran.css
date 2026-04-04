@@ -27,12 +27,11 @@ body {
     color: var(--text-dark);
 }
 
-/* Icons using Material Symbols */
 .material-symbols-outlined {
     font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
 }
 
-/* NAVBAR (from home.css) */
+/* NAVBAR */
 .navbar {
     width: 100%;
     background-color: #ffffff;
@@ -426,7 +425,7 @@ body {
     background-color: rgba(25, 28, 30, 0.4);
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
-    display: none; /* hidden by default */
+    display: none; 
     align-items: center;
     justify-content: center;
     padding: 16px;
@@ -985,7 +984,6 @@ body {
     border-radius: 12px;
 }
 
-/* Responsive Styles */
 @media (max-width: 992px) {
     .container {
         flex-direction: column;
@@ -1001,7 +999,7 @@ body {
         padding: 16px 20px;
     }
     nav {
-        display: none; /* Hide nav links on mobile */
+        display: none;
     }
     .address-card {
         flex-direction: column;
