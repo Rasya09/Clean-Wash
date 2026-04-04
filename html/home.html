@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clean Wash</title>
+    <link rel="stylesheet" href="../css/home.css">
+</head>
+<body>
+
+    <!-- ── NAVBAR ── -->
+    <header class="navbar">
+        <div class="container nav-wrapper">
+            <div class="logo">
+                <img src="../assets/img/CW.png" alt="Clean Wash Logo" />
+            </div>
+            <nav class="nav-menu">
+                <a href="#" class="active">Beranda</a>
+                <a href="#">Cari Laundry</a>
+                <a href="#">Layanan</a>
+                <a href="#">Pesanan Saya</a>
+            </nav>
+            <div class="nav-actions">
+                <a href="#" class="btn-login">Login</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- ── HERO ── -->
+    <section class="hero">
+        <div class="container hero-wrapper">
+            <div class="hero-content">
+                <h1>Laundry Jadi Lebih<br/>Mudah & Cepat</h1>
+                <p>Pesan laundry terdekat, antar jemput atau datang langsung dengan mudah.</p>
+                <a href="#" class="btn-primary">Cari Laundry</a>
+            </div>
+            <div class="hero-image">
+                <img src="../assets/img/img-hero.png" alt="Laundry Illustration" />
+            </div>
+        </div>
+    </section>
+
+    <!-- ── SEARCH ── -->
+    <section class="search-section">
+        <div class="search-bar">
+            <span class="search-icon">
+                <svg width="18" height="18" fill="none" stroke="#6d93f2" stroke-width="2" viewBox="0 0 24 24">
+                    <circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/>
+                </svg>
+            </span>
+            <input type="text" placeholder="Cari Laundry di sekitar kamu" />
+            <button class="btn-search">Cari</button>
+        </div>
+    </section>
+    <div class="search-actions">
+        <a href="#" class="btn-action">
+            <svg width="18" height="18" fill="none" stroke="#fff" stroke-width="2" viewBox="0 0 24 24">
+                <rect x="1" y="3" width="15" height="13" rx="2"/>
+                <path d="M16 8h4l3 3v5h-7V8z"/>
+                <circle cx="5.5" cy="18.5" r="1.5"/>
+                <circle cx="18.5" cy="18.5" r="1.5"/>
+            </svg>
+            Antar Jemput
+            <span class="arrow">></span>
+        </a>
+        <a href="#" class="btn-action">
+            <svg width="18" height="18" fill="none" stroke="#fff" stroke-width="2" viewBox="0 0 24 24">
+                <path d="M3 12L12 3l9 9"/><path d="M9 21V12h6v9"/>
+            </svg>
+            Antar Sendiri
+            <span class="arrow">></span>
+        </a>
+    </div>
+
+    <!-- ── LAUNDRY TERDEKAT ── -->
+    <section class="nearby-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Laundry Terdekat</h2>
+                <a href="#" class="section-link">Lihat Semua</a>
+            </div>
+            <div class="laundry-list" id="laundry-list">
+                <!-- Card dirender oleh JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- ── ANTAR JEMPUT ── -->
+    <section class="pickup-section">
+        <div class="container pickup-wrapper">
+            <div class="pickup-content">
+                <h1>Antar Jemput Cepat,<br/>Tanpa Ribet</h1>
+                <p>Nikmati layanan antar jemput laundry langsung dari lokasi Anda. Pilih jadwal sesuai kebutuhan, dan biarkan kami yang mengurus sisanya.</p>
+            </div>
+            <div class="pickup-image">
+                <img src="../assets/img/pickup.png" alt="Antar Jemput Illustration" />
+            </div>
+        </div>
+    </section>
+
+    <!-- ── LAYANAN LAUNDRY ── -->
+    <section class="services-section">
+        <div class="container">
+            <h2 class="section-center-title">Layanan Laundry Kami</h2>
+            <div class="services-grid" id="services-grid"></div>
+        </div>
+    </section>
+
+    <!-- ── FITUR UNGGULAN ── -->
+    <section class="features-section">
+        <div class="container">
+            <h2 class="section-center-title">Fitur Unggulan Kami</h2>
+            <div class="features-list" id="features-list"></div>
+        </div>
+    </section>
+
+    <!-- ── PROSES KERJA ── -->
+    <section class="process-section">
+        <div class="container">
+            <h2 class="section-center-title">Proses Kerja Kami</h2>
+            <div class="process-list" id="process-list"></div>
+        </div>
+    </section>
+
+    <!-- ── TESTIMONI ── -->
+    <section class="testimonial-section">
+        <div class="container">
+            <h2 class="section-center-title testimonial-section__title">Apa Kata Pengguna Kami</h2>
+            <div class="testimonial-stats">
+                <div class="testimonial-stat">
+                    <span class="testimonial-stat__star">⭐</span>
+                    <span class="testimonial-stat__value">5.0</span>
+                </div>
+                <div class="testimonial-stat testimonial-stat--outline">
+                    <span class="testimonial-stat__stars">★★★★★</span>
+                </div>
+            </div>
+            <div class="testimonial-meta">
+                <span>Rating Rata-rata</span>
+                <span>1.000+ Ulasan</span>
+            </div>
+            <div class="testimonial-card">
+                <div class="testimonial-card__header">
+                    <span class="testimonial-card__stars-badge">★★★★★</span>
+                    <img src="../assets/img/Kutip.png" alt="" srcset="" class="testimonial-card__quote-icon">
+                </div>
+                <p class="testimonial-card__text">
+                    "Layanan antar jemput sangat membantu, cucian bersih dan wangi. Proses cepat dan harga terjangkau. Sangat direkomendasikan untuk yang sibuk!"
+                </p>
+                <div class="testimonial-card__author">
+                    <div class="testimonial-card__avatar"></div>
+                    <div>
+                        <span class="testimonial-card__name">Millon Zahino</span>
+                        <span class="testimonial-card__role">Pelanggan Setia</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── FORM ULASAN ── -->
+    <section class="review-section">
+        <div class="container review-wrapper">
+            <div class="review-form-box">
+                <h3 class="review-form-box__title">Bagaimana Pengalaman Anda?</h3>
+                <p class="review-form-box__subtitle">Silahkan berikan rating & ulasan untuk website kami</p>
+                <div class="review-emoji" id="review-emoji">😊</div>
+                <div class="review-stars" id="review-stars">
+                    <span class="star" data-value="1">★</span>
+                    <span class="star" data-value="2">★</span>
+                    <span class="star" data-value="3">★</span>
+                    <span class="star" data-value="4">★</span>
+                    <span class="star" data-value="5">★</span>
+                </div>
+                <textarea class="review-textarea" placeholder="Tuliskan ulasan anda di sini...."></textarea>
+                <button class="btn-review-submit">Kirim</button>
+                <p class="review-form-box__note">Feedback anda sangat membantu kami menyempurnakan layanan website kami.</p>
+            </div>
+            <div class="review-illustration">
+                <img src="../assets/img/review-illustration.png" alt="Review Illustration" />
+            </div>
+        </div>
+    </section>
+
+    <!-- Bottom bar -->
+    <footer class="footer">
+        <div class="container footer-top">
+ 
+            <!-- Brand -->
+            <div class="footer-brand">
+                <div class="footer-brand__logo">
+                    <img src="../assets/img/LogoBottom.png" alt="Clean Wash Logo" />
+                    <div class="footer-brand__name">
+                        <span class="footer-brand__cw">CW</span>
+                        <span class="footer-brand__cleanwash">Clean Wash</span>
+                    </div>
+                </div>
+                <p class="footer-brand__desc">
+                    Platform digital yang membantu Anda menemukan layanan laundry terpercaya dengan mudah dan praktis
+                </p>
+            </div>
+ 
+            <div class="footer-divider"></div>
+ 
+            <!-- Kontak -->
+            <div class="footer-contact">
+                <span class="footer-col__title">Kontak Kami</span>
+                <a href="mailto:cleanwash@gmail.com" class="footer-contact__item">
+                    <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+                        <rect x="2" y="4" width="20" height="16" rx="2"/>
+                        <path d="M2 7l10 7 10-7"/>
+                    </svg>
+                    cleanwash@gmail.com
+                </a>
+                <a href="tel:+628881-0102" class="footer-contact__item">
+                    <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+                        <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 01.22 2.18 2 2 0 012.18 0h3a2 2 0 012 1.72c.13 1 .37 1.97.72 2.9a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.18-1.18a2 2 0 012.11-.45c.93.35 1.9.59 2.9.72A2 2 0 0122 16.92z"/>
+                    </svg>
+                    +62-8881-0102
+                </a>
+            </div>
+ 
+            <div class="footer-divider"></div>
+ 
+            <!-- Sosial Media -->
+            <div class="footer-social">
+                <span class="footer-col__title">Ikuti Kami</span>
+                <div class="footer-social__icons">
+                    <a href="#" class="footer-social__icon" aria-label="Facebook">
+                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="footer-social__icon" aria-label="Instagram">
+                        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <rect x="2" y="2" width="20" height="20" rx="5"/>
+                            <circle cx="12" cy="12" r="4"/>
+                            <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="footer-social__icon" aria-label="TikTok">
+                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.79 1.53V6.75a4.85 4.85 0 01-1.02-.06z"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="footer-social__icon" aria-label="X (Twitter)">
+                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+ 
+        </div>
+ 
+        <!-- Bottom bar -->
+        <div class="footer-bottom">
+            <div class="container footer-bottom__wrapper">
+                <span class="footer-bottom__copy">
+                    <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <circle cx="12" cy="12" r="10"/>
+                        <path d="M15 9.354a4 4 0 100 5.292"/>
+                    </svg>
+                    2026 Clean Wash
+                </span>
+                <div class="footer-bottom__links">
+                    <a href="#">Kebijakan Privasi</a>
+                    <a href="#">Syarat & Ketentuan</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const laundries = [
+            {
+                name: "UBR Laundry",
+                price: "Rp 7.000",
+                rating: "5.0",
+                distance: "1-2 km",
+                image: "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/cJbMtcrhbu/vpjq3z1v_expires_30_days.png",
+                starImage: "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/cJbMtcrhbu/h2hp5j48_expires_30_days.png"
+            },
+            {
+                name: "Sorcha Laundry Arcamanik",
+                price: "Rp 5.000",
+                rating: "5.0",
+                distance: "1-2 km",
+                image: "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/cJbMtcrhbu/nkyyacsq_expires_30_days.png",
+                starImage: "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/cJbMtcrhbu/zjtnxu7o_expires_30_days.png"
+            },
+            {
+                name: "Laundry Express Bandung",
+                price: "Rp 7.000",
+                rating: "5.0",
+                distance: "1-2 km",
+                image: "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/cJbMtcrhbu/ao9ji4iu_expires_30_days.png",
+                starImage: "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/cJbMtcrhbu/rvy5nd09_expires_30_days.png"
+            },
+            {
+                name: "Molaundry",
+                price: "Rp 5.000",
+                rating: "5.0",
+                distance: "1-2 km",
+                image: "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/cJbMtcrhbu/5gfqb427_expires_30_days.png",
+                starImage: "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/cJbMtcrhbu/5zwsqqjf_expires_30_days.png"
+            }
+        ];
+
+        function createLaundryCard(laundry) {
+            return `
+                <div class="laundry-card">
+                    <img src="${laundry.image}" alt="${laundry.name}" class="laundry-card__image" />
+                    <div class="laundry-card__body">
+                        <div class="laundry-card__info">
+                            <span class="laundry-card__name">${laundry.name}</span>
+                            <div class="laundry-card__meta">
+                                <div class="laundry-card__rating">
+                                    <img src="${laundry.starImage}" alt="Rating" class="laundry-card__stars" />
+                                    <span>${laundry.rating}</span>
+                                </div>
+                                <span class="laundry-card__distance">${laundry.distance}</span>
+                            </div>
+                        </div>
+                        <div class="laundry-card__footer">
+                            <div class="laundry-card__price">
+                                <span>${laundry.price}</span>
+                                <span>/kg</span>
+                            </div>
+                            <button class="btn-detail" onclick="alert('Pressed!')">
+                                Lihat Detail
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        document.getElementById('laundry-list').innerHTML =
+            laundries.map(createLaundryCard).join('');
+
+        // Data layanan laundry
+        const services = [
+            { name: "Cuci Kiloan",   desc: "Cocok untuk kebutuhan laundry harian",          badge: true,  image: "../assets/img/kiloan.png" },
+            { name: "Cuci Satuan",   desc: "Untuk pakaian tertentu dengan perhitungan satuan", badge: true, image: "../assets/img/satuan.png" },
+            { name: "Cuci Express",  desc: "Selesai lebih cepat dari layanan biasa",         badge: false, image: "../assets/img/express.png" },
+            { name: "Cuci Sepatu",   desc: "Perawatan sepatu agar tetap bersih dan awet",   badge: false, image: "../assets/img/sepatu.png" },
+            { name: "Cuci Tas",      desc: "Bersihkan tas tanpa merusak bahan",              badge: false, image: "../assets/img/tas.png" },
+            { name: "Cuci Karpet",   desc: "Untuk karpet dan item besar",                   badge: false, image: "../assets/img/karpet.png" },
+        ];
+ 
+        function createServiceCard(svc) {
+            return `
+                <div class="service-card">
+                    ${svc.badge ? '<span class="service-badge">🔥 Terpopuler</span>' : ''}
+                    <div class="service-card__top">
+                        <div class="service-card__text">
+                            <h3 class="service-card__name">${svc.name}</h3>
+                            <p class="service-card__desc">${svc.desc}</p>
+                        </div>
+                        <img src="${svc.image}" alt="${svc.name}" class="service-card__image" />
+                    </div>
+                    <button class="btn-service-detail" onclick="alert('Pressed!')">Lihat Detail</button>
+                </div>
+            `;
+        }
+ 
+        document.getElementById('services-grid').innerHTML =
+            services.map(createServiceCard).join('');
+
+        // Data fitur unggulan
+        const features = [
+            { title: "Tracking",              desc: "Pantau status laundry kamu dengan mudah",              image: "../assets/img/tracking.png" },
+            { title: "Antar Jemput",          desc: "Laundry dijemput dan diantar kembali",                 image: "../assets/img/pickup.png" },
+            { title: "Pembayaran Fleksibel",  desc: "Kamu bisa memilih bayar sekarang atau saat selesai",   image: "../assets/img/payment.png" },
+        ];
+ 
+        function createFeatureCard(feat) {
+            return `
+                <div class="feature-card">
+                    <div class="feature-card__text">
+                        <span class="feature-card__title">${feat.title}</span>
+                        <span class="feature-card__desc">${feat.desc}</span>
+                    </div>
+                    <img src="${feat.image}" alt="${feat.title}" class="feature-card__image" />
+                </div>
+            `;
+        }
+ 
+        document.getElementById('features-list').innerHTML =
+            features.map(createFeatureCard).join('');
+
+        // Data proses kerja
+        const steps = [
+            { label: "Pilih Laundry",              image: "../assets/img/step-1.png" },
+            { label: "Pilih Layanan",              image: "../assets/img/step-2.png" },
+            { label: "Tracking Laundry hingga selesai", image: "../assets/img/step-3.png" },
+        ];
+ 
+        function createStepCard(step) {
+            return `
+                <div class="step-card">
+                    <img src="${step.image}" alt="${step.label}" class="step-card__image" />
+                    <span class="step-card__label">${step.label}</span>
+                </div>
+            `;
+        }
+ 
+        document.getElementById('process-list').innerHTML =
+            steps.map(createStepCard).join('');
+
+        // Star Rating
+        const stars = document.querySelectorAll('.star');
+        const emoji = document.getElementById('review-emoji');
+        const emojiMap = { 1: '😞', 2: '😕', 3: '😐', 4: '😊', 5: '😍' };
+        let currentRating = 0;
+ 
+        stars.forEach(star => {
+            star.addEventListener('click', () => {
+                currentRating = parseInt(star.dataset.value);
+                updateStars(currentRating);
+                emoji.textContent = emojiMap[currentRating];
+            });
+            star.addEventListener('mouseover', () => updateStars(parseInt(star.dataset.value)));
+            star.addEventListener('mouseout', () => updateStars(currentRating));
+        });
+ 
+        function updateStars(rating) {
+            stars.forEach(s => {
+                s.classList.toggle('star--active', parseInt(s.dataset.value) <= rating);
+            });
+        }
+    </script>
+</body>
+</html>
