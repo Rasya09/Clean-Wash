@@ -518,3 +518,35 @@ hr {
 .footer-bottom__links a:hover {
     color: var(--color-primary);
 }
+
+/* ───RESPONSIVE─── */
+
+/* ─── TABLET ─── */
+@media (max-width: 1024px) {
+
+  .nav-menu a {
+    font-size: 16px;
+  }
+
+  .btn-login {
+    padding: 12px 20px;
+    font-size: 14px;
+  }
+
+  .hero {
+    gap: 24px;
+  }
+
+  .hero-left h1 {
+    font-size: 24px;
+  }
+
+  .main-img {
+    width: 100%;
+  }
+
+  .thumbnails img {
+    width: 100px;
+  }
+}
+
