@@ -1,0 +1,178 @@
+/* RESET */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+/* ROOT */
+:root {
+    --primary:       #6d93f2;
+    --primary-hover: #587fe0;
+    --color-card-bg: #c5cef0;
+    --white:         #ffffff;
+    --text-dark:     #111;
+    --text-mid:      #5a6a7a;
+    --text-light:    #9aaab8;
+    --border:        #d8e4ee;
+    --font:          'Poppins', sans-serif;
+}
+
+body {
+    font-family: var(--font);
+    color: var(--text-dark);
+}
+
+/* CONTAINER */
+.container {
+    width: 90%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* NAVBAR */
+.navbar {
+    width: 100%;
+    background-color: var(--white);
+    padding: 20px 0;
+    box-shadow: 0 1px 8px rgba(0,0,0,0.06);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo img { width: 160px; height: auto; }
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: #111;
+    font-size: 16px;
+    font-weight: 500;
+    position: relative;
+    transition: color 0.3s;
+}
+
+.nav-menu a:hover,
+.nav-menu a.active { color: var(--primary); }
+
+.nav-menu a.active::after {
+    content: "";
+    position: absolute;
+    left: 0; bottom: -2px;
+    width: 100%; height: 3px;
+    background-color: var(--primary);
+    border-radius: 10px;
+}
+
+.btn-login {
+    display: inline-block;
+    text-decoration: none;
+    background-color: var(--primary);
+    color: white;
+    padding: 12px 28px;
+    border-radius: 12px;
+    font-size: 15px;
+    font-weight: 500;
+    transition: background-color 0.3s;
+}
+
+.btn-login:hover { background-color: var(--primary-hover); }
+
+/* Layanan Laundry */
+.section-center-title{
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+    font-size: 32px;
+    font-weight: 600;
+    color: #000;
+}
+ 
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+ 
+.service-card {
+    background-color: #c5cef0;
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    position: relative;
+}
+ 
+.service-badge {
+    display: inline-block;
+    background-color: #fff;
+    color: #f57c00;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 20px;
+    width: fit-content;
+}
+ 
+.service-card__top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 12px;
+}
+ 
+.service-card__text {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+ 
+.service-card__name {
+    font-size: 28px;
+    font-weight: 700;
+    color: #111;
+    line-height: 1.2;
+}
+ 
+.service-card__desc {
+    font-size: 13px;
+    color: #444;
+    line-height: 1.5;
+    max-width: 200px;
+}
+ 
+.service-card__image {
+    width: 150px;
+    height: 100px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+ 
+.btn-service-detail {
+    width: 100%;
+    background-color: #6d93f2;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 12px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+ 
+.btn-service-detail:hover {
+    background-color: #587fe0;
+}

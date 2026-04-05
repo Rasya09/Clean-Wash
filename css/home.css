@@ -23,15 +23,27 @@ body {
     --color-primary-hover: #587fe0;
     --color-card-bg: #BBCFF9;
     --color-text-muted: #666;
+    --primary:       #6d93f2;
+    --primary-hover: #587fe0;
+    --color-card-bg: #c5cef0;
+    --white:         #ffffff;
+    --text-dark:     #111;
+    --text-mid:      #5a6a7a;
+    --text-light:    #9aaab8;
+    --border:        #d8e4ee;
+    --font:          'Poppins', sans-serif;
 }
+
 
 /* NAVBAR */
 .navbar {
     width: 100%;
-    background-color: #ffffff;
+    background-color: var(--white);
     padding: 20px 0;
-    box-shadow: 0 2px 16px rgba(0, 0, 0, 0.1);
-    z-index: 1;
+    box-shadow: 0 1px 8px rgba(0,0,0,0.06);
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
 .nav-wrapper {
@@ -40,57 +52,48 @@ body {
     justify-content: space-between;
 }
 
-.logo img {
-    width: 160px;
-    height: auto;
-}
+.logo img { width: 160px; height: auto; }
 
 .nav-menu {
     display: flex;
     align-items: center;
-    gap: 48px;
+    gap: 40px;
 }
 
 .nav-menu a {
     text-decoration: none;
     color: #111;
-    font-size: 22px;
+    font-size: 16px;
     font-weight: 500;
     position: relative;
     transition: color 0.3s;
 }
 
 .nav-menu a:hover,
-.nav-menu a.active {
-    color: var(--color-primary);
-}
+.nav-menu a.active { color: var(--color-primary); }
 
 .nav-menu a.active::after {
     content: "";
     position: absolute;
-    left: 0;
-    bottom: -2px;
-    width: 100%;
-    height: 3px;
-    background-color: var(--color-primary);
+    left: 0; bottom: -2px;
+    width: 100%; height: 3px;
+    background-color: var(--primary);
     border-radius: 10px;
 }
 
 .btn-login {
     display: inline-block;
     text-decoration: none;
-    background-color: var(--color-primary);
+    background-color: var(--primary);
     color: white;
-    padding: 18px 34px;
+    padding: 12px 28px;
     border-radius: 12px;
-    font-size: 20px;
+    font-size: 15px;
     font-weight: 500;
     transition: background-color 0.3s;
 }
 
-.btn-login:hover {
-    background-color: var(--color-primary-hover);
-}
+.btn-login:hover { background-color: var(--primary-hover); }
 
 /* HERO */
 .hero {

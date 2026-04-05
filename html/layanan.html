@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layanan - Clean Wash</title>
+    <link rel="stylesheet" href="../css/layanan.css">
+</head>
+<body>
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <div class="container nav-wrapper">
+            <div class="logo">
+                <img src="../assets/img/CW.png" alt="Clean Wash Logo" />
+            </div>
+            <nav class="nav-menu">
+                <a href="home.html">Beranda</a>
+                <a href="cari_laundry.html">Cari Laundry</a>
+                <a href="#" class="active">Layanan</a>
+                <a href="#">Pesanan Saya</a>
+            </nav>
+            <div class="nav-actions">
+                <a href="#" class="btn-login">Login</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- ── LAYANAN LAUNDRY ── -->
+    <section class="services-section">
+        <div class="container">
+            <h2 class="section-center-title">Cari Laundry Dengan Layanan</h2>
+            <div class="services-grid" id="services-grid">
+                <!-- card 1 -->
+                <div class="service-card">
+                    <span class="service-badge">🔥 Terpopuler</span>
+                    <div class="service-card__top">
+                        <div class="service-card__text">
+                            <h3 class="service-card__name">Cuci Kiloan</h3>
+                            <p class="service-card__desc">Cocok untuk kebutuhan laundry harian</p>
+                        </div>
+                        <img src="../assets/img/kiloan.png" alt="Cuci Kiloan" class="service-card__image" />
+                    </div>
+                    <button class="btn-service-detail" onclick="alert('Pressed!')">Cari Laundry</button>
+                </div>
+                <!-- card 2 -->
+                <div class="service-card">
+                    <span class="service-badge">🔥 Terpopuler</span>
+                    <div class="service-card__top">
+                        <div class="service-card__text">
+                            <h3 class="service-card__name">Cuci Satuan</h3>
+                            <p class="service-card__desc">Untuk pakaian tertentu dengan perhitungan satuan</p>
+                        </div>
+                        <img src="../assets/img/satuan.png" alt="Cuci Satuan" class="service-card__image" />
+                    </div>
+                    <button class="btn-service-detail" onclick="alert('Pressed!')">Cari Laundry</button>
+                </div>                
+                <!-- card 3 -->
+                <div class="service-card">
+                    <div class="service-card__top">
+                        <div class="service-card__text">
+                            <h3 class="service-card__name">Cuci Express</h3>
+                            <p class="service-card__desc">Selesai lebih cepat dari layanan biasa</p>
+                        </div>
+                        <img src="../assets/img/express.png" alt="Cuci Express" class="service-card__image" />
+                    </div>
+                    <button class="btn-service-detail" onclick="alert('Pressed!')">Cari Laundry</button>
+                </div>
+                <!-- card 4 -->
+                <div class="service-card">
+                    <div class="service-card__top">
+                        <div class="service-card__text">
+                            <h3 class="service-card__name">Cuci Sepatu</h3>
+                            <p class="service-card__desc">Perawatan sepatu agar tetap bersih dan awet</p>
+                        </div>
+                        <img src="../assets/img/sepatu.png" alt="Cuci Sepatu" class="service-card__image" />
+                    </div>
+                    <button class="btn-service-detail" onclick="alert('Pressed!')">Cari Laundry</button>
+                </div>
+                <!-- card 5 -->
+                <div class="service-card">
+                    <div class="service-card__top">
+                        <div class="service-card__text">
+                            <h3 class="service-card__name">Cuci Tas</h3>
+                            <p class="service-card__desc">Bersihkan tas tanpa merusak bahan</p>
+                        </div>
+                        <img src="../assets/img/tas.png" alt="Cuci Tas" class="service-card__image" />
+                    </div>
+                    <button class="btn-service-detail" onclick="alert('Pressed!')">Cari Laundry</button>
+                </div>
+                <!-- card 6 -->
+                <div class="service-card">
+                    <div class="service-card__top">
+                        <div class="service-card__text">
+                            <h3 class="service-card__name">Cuci Karpet</h3>
+                            <p class="service-card__desc">Untuk karpet dan item besar</p>
+                        </div>
+                        <img src="../assets/img/karpet.png" alt="Cuci Karpet" class="service-card__image" />
+                    </div>
+                    <button class="btn-service-detail" onclick="alert('Pressed!')">Cari Laundry</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Data layanan laundry
+        // const services = [
+        //     { name: "Cuci Kiloan",   desc: "Cocok untuk kebutuhan laundry harian",          badge: true,  image: "../assets/img/kiloan.png" },
+        //     { name: "Cuci Satuan",   desc: "", badge: true, image: "../assets/img/satuan.png" },
+        //     { name: "Cuci Express",  desc: "Selesai lebih cepat dari layanan biasa",         badge: false, image: "../assets/img/express.png" },
+        //     { name: "Cuci Sepatu",   desc: "Perawatan sepatu agar tetap bersih dan awet",   badge: false, image: "../assets/img/sepatu.png" },
+        //     { name: "Cuci Tas",      desc: "Bersihkan tas tanpa merusak bahan",              badge: false, image: "../assets/img/tas.png" },
+        //     { name: "Cuci Karpet",   desc: "Untuk karpet dan item besar",                   badge: false, image: "../assets/img/karpet.png" },
+        // ];
+ 
+        // function createServiceCard(svc) {
+        //     return `
+        //         <div class="service-card">
+        //             ${svc.badge ? '<span class="service-badge"> Terpopuler</span>' : ''}
+        //             <div class="service-card__top">
+        //                 <div class="service-card__text">
+        //                     <h3 class="service-card__name">${svc.name}</h3>
+        //                     <p class="service-card__desc">${svc.desc}</p>
+        //                 </div>
+        //                 <img src="${svc.image}" alt="${svc.name}" class="service-card__image" />
+        //             </div>
+        //             <button class="btn-service-detail" onclick="alert('Pressed!')">Cari Laundry</button>
+        //         </div>
+        //     `;
+        // }
+ 
+        // document.getElementById('services-grid').innerHTML =
+        //     services.map(createServiceCard).join('');
+    </script>
+</body>
+</html>
