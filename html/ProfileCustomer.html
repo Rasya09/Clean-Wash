@@ -10,6 +10,25 @@
     <link rel="stylesheet" href="../CSS/ProfileCustomer.css" />
 </head>
 <body>
+
+    <!-- ── NAVBAR ── -->
+    <header class="navbar">
+        <div class="container nav-wrapper">
+            <div class="logo">
+                <img src="../Assets/img/CW.png" alt="Clean Wash Logo" />
+            </div>
+            <nav class="nav-menu">
+                <a href="home.html">Beranda</a>
+                <a href="cari-laundry.html">Cari Laundry</a>
+                <a href="#">Layanan</a>
+                <a href="#">Pesanan Saya</a>
+            </nav>
+            <div class="nav-actions">
+                <a href="#" class="btn-login">Login</a>
+            </div>
+        </div>
+    </header>
+
     <div class="layout">
         <aside class="sidebar">
             <div class="profile-card">
@@ -19,7 +38,7 @@
                 </div>
                 <div class="profile-info">
                     <h3 class="profile-name">Rizky Pratama</h3>
-                    <p class="profile-email">rizky@example.com</p>
+                    <p class="profile-email"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="c4b6adbeafbd84a1bca5a9b4a8a1eaa7aba9">[email&#160;protected]</a></p>
                     <span class="profile-badge">Customer Aktif</span>
                 </div>
                 <button class="hamburger" onclick="toggleNav()" aria-label="Toggle menu">
@@ -146,11 +165,4 @@
 
     </div>
 
-    <script>
-        function toggleNav() {
-            const nav = document.getElementById('sidebar-nav');
-            nav.classList.toggle('open');
-        }
-    </script>
-</body>
-</html>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-s
