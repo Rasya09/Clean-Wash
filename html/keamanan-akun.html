@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clean Wash - Profil Saya</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" />
+    <link rel="stylesheet" href="../css/keamanan-akun.css" />
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="container nav-wrapper">
+            <div class="logo">
+                <img src="../Assets/img/CW.png" alt="Clean Wash Logo" />
+            </div>
+            <nav class="nav-menu">
+                <a href="home.html">Beranda</a>
+                <a href="cari-laundry.html">Cari Laundry</a>
+                <a href="#">Layanan</a>
+                <a href="#">Pesanan Saya</a>
+            </nav>
+            <div class="nav-actions">
+                <a href="#" class="btn-login">Login</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="layout">
+        <aside class="sidebar">
+            <div class="profile-card">
+                <div class="profile-banner"></div>
+                <div class="profile-avatar">
+                    <img src="../Assets/Icon/Avatar.png" alt="Avatar" />
+                </div>
+                <div class="profile-info">
+                    <h3 class="profile-name">Rizky Pratama</h3>
+                    <p class="profile-email">rizky@example.com</p>
+                    <span class="profile-badge">Customer Aktif</span>
+                </div>
+                <button class="hamburger" onclick="toggleNav()" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+
+            <nav class="sidebar-nav" id="sidebar-nav">
+                <a href="#" class="nav-item">Profil Saya</a>
+                <a href="#" class="nav-item">Alamat Saya</a>
+                <a href="#" class="nav-item">Riwayat Pesanan</a>
+                <a href="#" class="nav-item active">Keamanan Akun</a>
+                <a href="#" class="nav-item logout">Logout</a>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <div class="content-header">
+                <h1 class="page-title">Keamanan Akun</h1>
+                <p class="page-desc">Kelola password, verifikasi, dan pengaturan keamanan akun Anda.</p>
+            </div>
+
+            <div class="login-terakhir">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17" fill="none">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M8.39481 1.67915C7.99812 1.44028 7.50188 1.44028 7.10519 1.67915L6.58888 1.99004C5.20765 2.82175 3.65703 3.33212 2.05183 3.48335L1.72655 3.51399C1.59813 3.52609 1.5 3.63391 1.5 3.76289V5.40678C1.5 7.91432 2.51803 10.3144 4.32088 12.0573L7.57624 15.2043C7.67314 15.2979 7.82686 15.2979 7.92376 15.2043L11.1791 12.0573C12.982 10.3144 14 7.91432 14 5.40678V3.76289C14 3.6339 13.9019 3.52609 13.7735 3.51399L13.4482 3.48335C11.843 3.33212 10.2923 2.82175 8.91112 1.99004L8.39481 1.67915ZM6.33141 0.394132C7.20413 -0.131377 8.29586 -0.131378 9.16859 0.394132L9.68489 0.705024C10.8734 1.42068 12.2076 1.85983 13.5889 1.98996L13.9141 2.02061C14.8131 2.1053 15.5 2.85999 15.5 3.76289V5.40678C15.5 8.32095 14.3169 11.1103 12.2217 13.1357L8.96632 16.2827C8.28801 16.9385 7.21199 16.9385 6.53368 16.2827L3.27832 13.1357C1.18311 11.1102 0 8.32095 0 5.40678V3.76289C0 2.85998 0.686926 2.1053 1.58585 2.02061L1.91113 1.98996C3.29235 1.85983 4.62661 1.42068 5.81511 0.705025L6.33141 0.394132Z" fill="#2563EB"/>
+                </svg>
+                <p>Login terakhir: Rabu, 02 April 2026 pukul 09:15 dari Chrome · Windows · Bandar Lampung, ID</p>
+            </div>
+
+            <div class="ubah-password">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="12" viewBox="0 0 22 12" fill="none">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M0 5.75C0 2.57436 2.57436 0 5.75 0C7.93057 0 9.82624 1.21371 10.8008 3H19.75C20.7165 3 21.5 3.7835 21.5 4.75V7.25C21.5 7.66421 21.1642 8 20.75 8H18.5V9.75C18.5 10.1642 18.1642 10.5 17.75 10.5H15.25C14.8358 10.5 14.5 10.1642 14.5 9.75V8H11.0429C10.1674 10.0568 8.12807 11.5 5.75 11.5C2.57436 11.5 0 8.92564 0 5.75ZM5.75 3.75C4.64543 3.75 3.75 4.64543 3.75 5.75C3.75 6.85457 4.64543 7.75 5.75 7.75C6.85457 7.75 7.75 6.85457 7.75 5.75C7.75 4.64543 6.85457 3.75 5.75 3.75Z" fill="black"/>
+                </svg>
+                <div class="info-password">
+                    <h2>Ubah Password</h2>
+                    <p>Perbarui password secara berkala untuk keamanan akun Anda.</p>
+                </div>
+                <hr class="tengah">
+                <div class="input-password">
+                    <h4>Password Saat Ini</h4>
+                    <input type="password" placeholder="Masukkan password saat ini">
+                </div>
+
+                <div class="input-password setengah">
+                    <h4>Password Baru</h4>
+                    <input type="password" placeholder="Min. 8 karakter">
+                </div>
+
+                <div class="input-password setengah">
+                    <h4>Konfirmasi Password Baru</h4>
+                    <input type="password" placeholder="ulangi password baru">
+                </div>
+
+                <div class="btn-group">
+                    <button class="btn-batal">Batal</button>
+                    <button class="btn-simpan">Simpan Password</button>
+                </div>
+            </div>
+
+        </main>
+
+    </div>
+
+    <script>
+        function toggleNav() {
+            const nav = document.getElementById('sidebar-nav');
+            nav.classList.toggle('open');
+        }
+    </script>
+</body>
+</html>
