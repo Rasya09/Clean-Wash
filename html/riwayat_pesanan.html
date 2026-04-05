@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Riwayat Pesanan - Clean Wash</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" />
+    <link rel="stylesheet" href="../css/riwayat_pesanan.css" />
+</head>
+<body>
+
+    <!-- ── NAVBAR ── -->
+    <header class="navbar">
+        <div class="container nav-wrapper">
+            <div class="logo">
+                <img src="../assets/img/CW.png" alt="Clean Wash Logo" />
+            </div>
+            <nav class="nav-menu">
+                <a href="home.html">Beranda</a>
+                <a href="cari_laundry.html">Cari Laundry</a>
+                <a href="layanan.html">Layanan</a>
+                <a href="riwayat_pesanan.html" class="active">Pesanan Saya</a>
+            </nav>
+            <div class="nav-profile">
+                <div class="nav-profile__avatar-wrap">
+                    <img src="../Assets/Icon/Avatar.png" alt="Rizky Pratama" class="nav-profile__avatar" />
+                    <div class="nav-profile__dropdown">
+                        <div class="nav-profile__info">
+                            <span class="nav-profile__name">Rizky Pratama</span>
+                            <span class="nav-profile__email"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="f2809b88998bb2978a939f829e97dc919d9f">[email&#160;protected]</a></span>
+                        </div>
+                        <div class="nav-profile__divider"></div>
+                        <a href="ProfileCustomer.html" class="nav-profile__item">
+                            <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                            Detail Profil
+                        </a>
+                        <a href="#" class="nav-profile__item nav-profile__item--logout">
+                            <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 21H5a2 2 0 01-2-2V5a2 2 0 012-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+                            Logout
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!--MAIN-->
+    <main class="riwayat-page">
+        <div class="container">
+
+            <!-- Header -->
+            <div class="page-header">
+                <h1 class="page-header__title">Riwayat Pesanan</h1>
+                <p class="page-header__desc">Lihat dan kelola semua riwayat pesanan laundry Anda.</p>
+            </div>
+
+            <!-- Statistik -->
+            <div class="stats-row">
+                <div class="stat-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="45" height="48" viewBox="0 0 45 48" fill="none">
+                        <path d="M13.9646 10.7211L17.9037 10.7149C18.1871 10.7152 18.5379 10.6848 18.8122 10.7593C19.4221 10.9247 20.0102 11.6619 19.8114 12.3616L19.8004 12.3986C19.73 12.6419 19.6276 12.8779 19.538 13.114L18.4039 16.3761C18.3878 16.42 18.3616 16.4491 18.3322 16.4833L14.6516 16.4946L10.2642 16.4938C9.72688 16.4913 9.25304 16.4706 8.93424 15.9301L8.91505 15.8967C8.32077 14.8731 9.31576 14.0689 9.89345 13.394C10.9078 12.2089 11.8888 11.0574 13.4425 10.7698L13.9646 10.7211Z" fill="#9BB7F6"/>
+                        <path d="M23.8958 10.7193C24.1936 10.6973 24.5025 10.7142 24.8013 10.7145L27.9613 10.7175C30.2241 10.7169 30.9909 11.558 32.5488 13.2546C33.2032 13.9674 34.2619 14.8124 33.66 15.9243L33.6118 16.0125C33.3622 16.4232 32.9725 16.5192 32.5471 16.5267L23.947 16.4965L22.7209 13.0153C22.3178 11.7975 22.6188 10.9137 23.8958 10.7193Z" fill="#9BB7F6"/>
+                        <path d="M27.8559 23.0732C29.2526 22.7594 30.6229 22.7993 31.9883 23.3021C34.3173 24.211 36.1525 26.2995 36.7509 28.8749L36.914 29.7306C36.9777 30.0531 36.9643 30.415 36.9647 30.7443C36.9683 34.4272 34.6948 37.7114 31.2194 38.4007C27.0703 39.2237 23.3492 36.5453 22.5474 32.1213L22.4955 31.7769C22.1262 28.0242 23.9704 24.3685 27.432 23.2109C27.5603 23.1681 27.7023 23.1425 27.8254 23.0873L27.8559 23.0732ZM31.7657 27.2156C31.2093 27.3335 31.0117 27.6934 30.663 28.1233L28.7588 30.5542C28.5571 30.8045 28.3429 31.1343 28.0991 31.3366C27.6255 30.8471 27.289 30.3263 26.5541 30.3366C25.7535 30.3478 25.0549 31.0865 25.22 31.969L25.2252 32.0006C25.2987 32.4312 25.6641 32.7257 25.9475 33.0064L26.705 33.7421C27.1354 34.1252 27.7267 34.7333 28.3257 34.681L28.4479 34.6677C28.9015 34.6175 29.2426 34.3191 29.5185 33.9536L32.4555 29.955C32.6335 29.7323 32.847 29.5201 32.994 29.2728C33.5277 28.3748 33.0248 27.3092 32.0473 27.2148L31.7657 27.2156Z" fill="#1A46A7"/>
+                        <path d="M22.4953 31.7766C22.0207 31.9231 21.5096 31.8554 21.0217 31.8557L15.8498 31.856C15.101 31.8557 14.334 31.9037 13.5952 31.753C12.4557 31.5206 11.4372 30.519 11.113 29.3326C10.9804 28.8474 10.9604 28.381 10.9389 27.8801L10.7967 23.3924L10.46 17.4579L17.9489 17.4272C17.9543 17.5495 17.8704 17.7553 17.8334 17.8747L17.5198 18.7874C17.1961 19.6519 16.6085 20.7203 17.6749 21.2732L17.7045 21.2882C17.885 21.3832 18.1191 21.446 18.3201 21.4061L18.3472 21.4004C19.0786 21.2565 19.7503 20.3231 20.2402 19.7762C21.0697 18.8502 21.2155 18.9009 22.0129 19.8071L22.9216 20.7611C23.1119 20.9463 23.2971 21.1407 23.5312 21.2628C24.2692 21.6476 25.3457 20.9567 25.2525 20.0947C25.2149 19.7469 25.0442 19.3917 24.9189 19.0707L24.6178 18.2312C24.5371 17.9897 24.4972 17.7291 24.4142 17.4925L32.3888 17.4457L32.3753 18.8264L32.181 22.0294C32.1713 22.3146 32.191 22.6441 32.136 22.9224L32.1287 22.957C32.1093 23.0543 32.0925 23.1264 32.0406 23.2103L31.9881 23.3018C30.6227 22.799 29.2524 22.7591 27.8557 23.0729L27.8252 23.087C27.7021 23.1422 27.5601 23.1678 27.4318 23.2106C23.9702 24.3682 22.126 28.0239 22.4953 31.7766Z" fill="#9BB7F6"/>
+                        <path d="M27.8559 23.073L27.8561 23.0402C27.8885 23.0349 27.909 23.0222 27.9384 23.0157L28.0027 23.0011C28.0425 22.9851 28.0935 22.981 28.1361 22.9688L28.1991 22.9541C28.2545 22.9318 28.3178 22.942 28.3779 22.9219L28.4658 22.9161L28.4142 22.7691L27.8352 22.9175C27.9263 22.8457 28.0809 22.8172 28.1904 22.7873C29.3428 22.4732 30.9806 22.5989 32.0407 23.2104L31.9883 23.3019C30.6229 22.7992 29.2526 22.7592 27.8559 23.073Z" fill="#EBFEFF"/>
+                    </svg>
+                    <div>
+                        <span class="stat-item__number">12</span>
+                        <span class="stat-item__label">Total Pesanan</span>
+                    </div>
+                </div>
+                <div class="stat-item">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                    <div>
+                        <span class="stat-item__number">9</span>
+                        <span class="stat-item__label">Selesai</span>
+                    </div>
+                </div>
+                <div class="stat-item">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                    <div>
+                        <span class="stat-item__number">2</span>
+                        <span class="stat-item__label">Sedang Diproses</span>
+                    </div>
+                </div>
+                <div class="stat-item">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                    <div>
+                        <span class="stat-item__number">1</span>
+                        <span class="stat-item__label">Dibatalkan</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Filter + Search -->
+            <!-- Radio hidden untuk CSS-only tab filter -->
+            <input type="radio" name="filter" id="tab-semua"      class="tab-radio" checked />
+            <input type="radio" name="filter" id="tab-diproses"   class="tab-radio" />
+            <input type="radio" name="filter" id="tab-siapdiambil" class="tab-radio" />
+            <input type="radio" name="filter" id="tab-selesai"    class="tab-radio" />
+            <input type="radio" name="filter" id="tab-dibatalkan" class="tab-radio" />
+
+            <div class="filter-bar">
+                <div class="search-wrap">
+                    <svg width="16" height="16" fill="none" stroke="#9aaab8" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+                    <input type="text" placeholder="Cari pesanan, laundry..." />
+                </div>
+                <div class="tabs">
+                    <label for="tab-semua"       class="tab">Semua</label>
+                    <label for="tab-diproses"    class="tab">Diproses</label>
+                    <label for="tab-siapdiambil" class="tab">Siap Diantar</label>
+                    <label for="tab-selesai"     class="tab">Selesai</label>
+                    <label for="tab-dibatalkan"  class="tab">Dibatalkan</label>
+                </div>
+            </div>
+
+            <!--DAFTAR PESANAN-->
+            <div class="order-list">
+
+                <!-- Card 1: Sedang Diproses -->
+                <div class="order-card order-card--diproses"
+                     data-status="diproses">
+                    <div class="order-card__head">
+                        <div class="order-card__id-wrap">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M3.31487 0C3.66158 0 3.94264 0.291665 3.94264 0.651451V2.09995C6.30954 1.88122 8.69051 1.88122 11.0574 2.09996V0.651451C11.0574 0.291665 11.3385 0 11.6852 0C12.0319 0 12.313 0.291665 12.313 0.651451V2.22921C13.5627 2.41258 14.55 3.43833 14.7171 4.74676L14.7896 5.31392C15.0943 7.69938 15.0679 10.1179 14.7114 12.4956C14.5348 13.6734 13.6127 14.5781 12.4695 14.6951L11.4709 14.7973C8.83004 15.0676 6.16996 15.0676 3.52909 14.7973L2.5305 14.6951C1.38733 14.5781 0.465212 13.6734 0.28859 12.4956C-0.0679506 10.1179 -0.0942675 7.69938 0.210442 5.31392L0.282888 4.74676C0.450024 3.43832 1.43734 2.41255 2.68709 2.2292V0.651451C2.68709 0.291665 2.96816 0 3.31487 0ZM3.68748 3.43341C6.22301 3.17394 8.77699 3.17394 11.3125 3.43341L12.0704 3.51097C12.7959 3.58521 13.3767 4.16802 13.4725 4.91797L13.5449 5.48512C13.5702 5.68326 13.5931 5.88164 13.6136 6.08021H1.3864C1.40689 5.88164 1.42979 5.68326 1.4551 5.48513L1.52755 4.91797C1.62334 4.16802 2.2041 3.58521 2.92959 3.51097L3.68748 3.43341ZM1.2866 7.38311C1.20442 9.0231 1.28538 10.6692 1.52921 12.2952C1.6178 12.886 2.08032 13.3398 2.65372 13.3985L3.6523 13.5007C6.21123 13.7626 8.78877 13.7626 11.3477 13.5007L12.3463 13.3985C12.9197 13.3398 13.3822 12.886 13.4708 12.2952C13.7146 10.6692 13.7956 9.0231 13.7134 7.38311H1.2866Z" fill="#92959C"/>
+                            </svg>
+                            <span class="order-card__id">#CW-2024-0012</span>
+                            <span class="order-card__date">02 April 2026 · 09:30</span>
+                        </div>
+                        <span class="order-card__status order-card__status--diproses">Sedang Diproses</span>
+                    </div>
+
+                    <div class="order-card__body">
+                        <div class="order-card__laundry">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="34" height="37" viewBox="0 0 34 37" fill="none">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0.343054L4.48518 26.1041V29.1715H29.4852V26.1041L33.9704 0.343054L32 0L31.3896 3.50611C30.1276 4.3627 28.4244 4.77297 26.766 4.3153C26.1496 4.14519 24.455 3.3887 23.4472 2.88484L22.9282 2.62531L22.4453 2.94721C20.9416 3.94971 19.536 4.85069 17.5 4.85069C15.4677 4.85069 13.826 3.81001 12.5616 2.95184L11.9815 2.55812L11.4136 2.96925C10.7098 3.47879 8.77563 4.49859 7.46713 4.8933C6.79568 5.09584 5.71218 5.21578 4.64555 5.21418C4.12165 5.21339 3.63028 5.18319 3.22527 5.12719C3.07992 5.10709 2.95586 5.08497 2.85181 5.06269L1.97036 0L0 0.343054ZM3.21362 7.14076L6.48518 25.9313V27.1715H27.4852V25.9313L30.9596 5.97556C29.537 6.52966 27.8846 6.69876 26.234 6.24323C25.5337 6.04998 24.1021 5.41924 23.0756 4.92877C21.6628 5.85368 19.9192 6.85069 17.5 6.85069C15.1611 6.85069 13.2764 5.81195 11.9939 4.97741C10.9537 5.61003 9.29834 6.42993 8.04473 6.80808C7.10877 7.09041 5.80612 7.21593 4.64254 7.21417C4.14957 7.21343 3.66108 7.18988 3.21362 7.14076ZM32 33H2V31H32V33ZM0 37H34V35H0V37Z" fill="black"/>
+                            </svg>
+                            <div>
+                                <p class="order-card__laundry-name">Bersih Laundry Premium</p>
+                                <div class="order-card__tags">
+                                    <span class="tag">Cuci Setrika</span>
+                                    <span class="tag">3 kg</span>
+                                    <span class="tag">Antar Jemput</span>
+                                </div>
+                                <div class="order-card__address">
+                                    <svg width="13" height="13" fill="none" stroke="#e04040" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                                    Jl. Soekarno Hatta No. 12, Rajabasa, Bandar Lampung
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Progress -->
+                        <div class="progress-wrap">
+                            <p class="progress-label">PROGRESS PESANAN</p>
+                            <div class="progress-steps">
+                                <div class="ps ps--done">
+                                    <div class="ps__dot ps__dot--done"></div>
+                                    <span class="ps__label">Dijemput</span>
+                                </div>
+                                <div class="ps-line ps-line--done"></div>
+                                <div class="ps ps--done">
+                                    <div class="ps__dot ps__dot--done"></div>
+                                    <span class="ps__label">Diterima</span>
+                                </div>
+                                <div class="ps-line ps-line--done"></div>
+                                <div class="ps ps--active">
+                                    <div class="ps__dot ps__dot--active"></div>
+                                    <span class="ps__label">Dicuci</span>
+                                </div>
+                                <div class="ps-line"></div>
+                                <div class="ps">
+                                    <div class="ps__dot"></div>
+                                    <span class="ps__label">Selesai</span>
+                                </div>
+                                <div class="ps-line"></div>
+                                <div class="ps">
+                                    <div class="ps__dot"></div>
+                                    <span class="ps__label">Diantar</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="order-card__foot">
+                        <div>
+                            <p class="order-card__total-label">Total Pembayaran</p>
+                            <p class="order-card__total-val">Rp 45.000</p>
+                        </div>
+                        <div class="order-card__actions">
+                            <button class="btn-secondary">
+                                <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 01.22 2.18 2 2 0 012.18 0h3a2 2 0 012 1.72c.13 1 .37 1.97.72 2.9a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.18-1.18a2 2 0 012.11-.45c.93.35 1.9.59 2.9.72A2 2 0 0122 16.92z"/></svg>
+                                Hubungi
+                            </button>
+                            <button class="btn-primary-sm">
+                                <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+                                Detail
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2: Siap Diambil -->
+                <div class="order-card order-card--siapdiambil"
+                     data-status="siapdiambil">
+                    <div class="order-card__head">
+                        <div class="order-card__id-wrap">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M3.31487 0C3.66158 0 3.94264 0.291665 3.94264 0.651451V2.09995C6.30954 1.88122 8.69051 1.88122 11.0574 2.09996V0.651451C11.0574 0.291665 11.3385 0 11.6852 0C12.0319 0 12.313 0.291665 12.313 0.651451V2.22921C13.5627 2.41258 14.55 3.43833 14.7171 4.74676L14.7896 5.31392C15.0943 7.69938 15.0679 10.1179 14.7114 12.4956C14.5348 13.6734 13.6127 14.5781 12.4695 14.6951L11.4709 14.7973C8.83004 15.0676 6.16996 15.0676 3.52909 14.7973L2.5305 14.6951C1.38733 14.5781 0.465212 13.6734 0.28859 12.4956C-0.0679506 10.1179 -0.0942675 7.69938 0.210442 5.31392L0.282888 4.74676C0.450024 3.43832 1.43734 2.41255 2.68709 2.2292V0.651451C2.68709 0.291665 2.96816 0 3.31487 0ZM3.68748 3.43341C6.22301 3.17394 8.77699 3.17394 11.3125 3.43341L12.0704 3.51097C12.7959 3.58521 13.3767 4.16802 13.4725 4.91797L13.5449 5.48512C13.5702 5.68326 13.5931 5.88164 13.6136 6.08021H1.3864C1.40689 5.88164 1.42979 5.68326 1.4551 5.48513L1.52755 4.91797C1.62334 4.16802 2.2041 3.58521 2.92959 3.51097L3.68748 3.43341ZM1.2866 7.38311C1.20442 9.0231 1.28538 10.6692 1.52921 12.2952C1.6178 12.886 2.08032 13.3398 2.65372 13.3985L3.6523 13.5007C6.21123 13.7626 8.78877 13.7626 11.3477 13.5007L12.3463 13.3985C12.9197 13.3398 13.3822 12.886 13.4708 12.2952C13.7146 10.6692 13.7956 9.0231 13.7134 7.38311H1.2866Z" fill="#92959C"/>
+                            </svg>
+                            <span class="order-card__id">#CW-2024-0011</span>
+                            <span class="order-card__date">01 April 2026 · 09:30</span>
+                        </div>
+                        <span class="order-card__status order-card__status--siap">Siap Diambil</span>
+                    </div>
+
+                    <div class="order-card__body">
+                        <div class="order-card__laundry">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="34" height="37" viewBox="0 0 34 37" fill="none">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0.343054L4.48518 26.1041V29.1715H29.4852V26.1041L33.9704 0.343054L32 0L31.3896 3.50611C30.1276 4.3627 28.4244 4.77297 26.766 4.3153C26.1496 4.14519 24.455 3.3887 23.4472 2.88484L22.9282 2.62531L22.4453 2.94721C20.9416 3.94971 19.536 4.85069 17.5 4.85069C15.4677 4.85069 13.826 3.81001 12.5616 2.95184L11.9815 2.55812L11.4136 2.96925C10.7098 3.47879 8.77563 4.49859 7.46713 4.8933C6.79568 5.09584 5.71218 5.21578 4.64555 5.21418C4.12165 5.21339 3.63028 5.18319 3.22527 5.12719C3.07992 5.10709 2.95586 5.08497 2.85181 5.06269L1.97036 0L0 0.343054ZM3.21362 7.14076L6.48518 25.9313V27.1715H27.4852V25.9313L30.9596 5.97556C29.537 6.52966 27.8846 6.69876 26.234 6.24323C25.5337 6.04998 24.1021 5.41924 23.0756 4.92877C21.6628 5.85368 19.9192 6.85069 17.5 6.85069C15.1611 6.85069 13.2764 5.81195 11.9939 4.97741C10.9537 5.61003 9.29834 6.42993 8.04473 6.80808C7.10877 7.09041 5.80612 7.21593 4.64254 7.21417C4.14957 7.21343 3.66108 7.18988 3.21362 7.14076ZM32 33H2V31H32V33ZM0 37H34V35H0V37Z" fill="black"/>
+                            </svg>
+                            <div>
+                                <p class="order-card__laundry-name">Kilat Laundry Express</p>
+                                <div class="order-card__tags">
+                                    <span class="tag">Dry Clean</span>
+                                    <span class="tag">2 kg</span>
+                                    <span class="tag">Drop-off</span>
+                                </div>
+                                <div class="order-card__address">
+                                    <svg width="13" height="13" fill="none" stroke="#e04040" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                                    Jl. Soekarno Hatta No. 12, Rajabasa, Bandar Lampung
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="order-card__foot">
+                        <div>
+                            <p class="order-card__total-label">Total Pembayaran</p>
+                            <p class="order-card__total-val">Rp 60.000</p>
+                        </div>
+                        <div class="order-card__actions">
+                            <button class="btn-secondary">
+                                <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 01.22 2.18 2 2 0 012.18 0h3a2 2 0 012 1.72c.13 1 .37 1.97.72 2.9a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.18-1.18a2 2 0 012.11-.45c.93.35 1.9.59 2.9.72A2 2 0 0122 16.92z"/></svg>
+                                Hubungi
+                            </button>
+                            <button class="btn-primary-sm">
+                                <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+                                Detail
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3: Selesai -->
+                <div class="order-card order-card--selesai"
+                     data-status="selesai">
+                    <div class="order-card__head">
+                        <div class="order-card__id-wrap">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M3.31487 0C3.66158 0 3.94264 0.291665 3.94264 0.651451V2.09995C6.30954 1.88122 8.69051 1.88122 11.0574 2.09996V0.651451C11.0574 0.291665 11.3385 0 11.6852 0C12.0319 0 12.313 0.291665 12.313 0.651451V2.22921C13.5627 2.41258 14.55 3.43833 14.7171 4.74676L14.7896 5.31392C15.0943 7.69938 15.0679 10.1179 14.7114 12.4956C14.5348 13.6734 13.6127 14.5781 12.4695 14.6951L11.4709 14.7973C8.83004 15.0676 6.16996 15.0676 3.52909 14.7973L2.5305 14.6951C1.38733 14.5781 0.465212 13.6734 0.28859 12.4956C-0.0679506 10.1179 -0.0942675 7.69938 0.210442 5.31392L0.282888 4.74676C0.450024 3.43832 1.43734 2.41255 2.68709 2.2292V0.651451C2.68709 0.291665 2.96816 0 3.31487 0ZM3.68748 3.43341C6.22301 3.17394 8.77699 3.17394 11.3125 3.43341L12.0704 3.51097C12.7959 3.58521 13.3767 4.16802 13.4725 4.91797L13.5449 5.48512C13.5702 5.68326 13.5931 5.88164 13.6136 6.08021H1.3864C1.40689 5.88164 1.42979 5.68326 1.4551 5.48513L1.52755 4.91797C1.62334 4.16802 2.2041 3.58521 2.92959 3.51097L3.68748 3.43341ZM1.2866 7.38311C1.20442 9.0231 1.28538 10.6692 1.52921 12.2952C1.6178 12.886 2.08032 13.3398 2.65372 13.3985L3.6523 13.5007C6.21123 13.7626 8.78877 13.7626 11.3477 13.5007L12.3463 13.3985C12.9197 13.3398 13.3822 12.886 13.4708 12.2952C13.7146 10.6692 13.7956 9.0231 13.7134 7.38311H1.2866Z" fill="#92959C"/>
+                            </svg>
+                            <span class="order-card__id">#CW-2024-0010</span>
+                            <span class="order-card__date">30 Maret 2026 · 10:30</span>
+                        </div>
+                        <span class="order-card__status order-card__status--selesai">Selesai</span>
+                    </div>
+
+                    <div class="order-card__body">
+                        <div class="order-card__laundry">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="34" height="37" viewBox="0 0 34 37" fill="none">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0.343054L4.48518 26.1041V29.1715H29.4852V26.1041L33.9704 0.343054L32 0L31.3896 3.50611C30.1276 4.3627 28.4244 4.77297 26.766 4.3153C26.1496 4.14519 24.455 3.3887 23.4472 2.88484L22.9282 2.62531L22.4453 2.94721C20.9416 3.94971 19.536 4.85069 17.5 4.85069C15.4677 4.85069 13.826 3.81001 12.5616 2.95184L11.9815 2.55812L11.4136 2.96925C10.7098 3.47879 8.77563 4.49859 7.46713 4.8933C6.79568 5.09584 5.71218 5.21578 4.64555 5.21418C4.12165 5.21339 3.63028 5.18319 3.22527 5.12719C3.07992 5.10709 2.95586 5.08497 2.85181 5.06269L1.97036 0L0 0.343054ZM3.21362 7.14076L6.48518 25.9313V27.1715H27.4852V25.9313L30.9596 5.97556C29.537 6.52966 27.8846 6.69876 26.234 6.24323C25.5337 6.04998 24.1021 5.41924 23.0756 4.92877C21.6628 5.85368 19.9192 6.85069 17.5 6.85069C15.1611 6.85069 13.2764 5.81195 11.9939 4.97741C10.9537 5.61003 9.29834 6.42993 8.04473 6.80808C7.10877 7.09041 5.80612 7.21593 4.64254 7.21417C4.14957 7.21343 3.66108 7.18988 3.21362 7.14076ZM32 33H2V31H32V33ZM0 37H34V35H0V37Z" fill="black"/>
+                            </svg>
+                            <div>
+                                <p class="order-card__laundry-name">Bersih Laundry Premium</p>
+                                <div class="order-card__tags">
+                                    <span class="tag">Cuci Lipat</span>
+                                    <span class="tag">5 kg</span>
+                                    <span class="tag">Antar Jemput</span>
+                                </div>
+                                <div class="order-card__address">
+                                    <svg width="13" height="13" fill="none" stroke="#e04040" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                                    Jl. Soekarno Hatta No. 12, Rajabasa, Bandar Lampung
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="order-card__foot">
+                        <div>
+                            <p class="order-card__total-label">Total Pembayaran</p>
+                            <p class="order-card__total-val">Rp 55.000</p>
+                        </div>
+                        <div class="order-card__actions">
+                            <button class="btn-rating">
+                                <svg width="14" height="14" fill="none" stroke="#f59e0b" stroke-width="2" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                Beri Rating
+                            </button>
+                            <button class="btn-primary-sm btn-primary-sm--green">
+                                <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 102.13-9.36L1 10"/></svg>
+                                Pesan Lagi
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4: Selesai -->
+                <div class="order-card order-card--selesai"
+                     data-status="selesai">
+                    <div class="order-card__head">
+                        <div class="order-card__id-wrap">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M3.31487 0C3.66158 0 3.94264 0.291665 3.94264 0.651451V2.09995C6.30954 1.88122 8.69051 1.88122 11.0574 2.09996V0.651451C11.0574 0.291665 11.3385 0 11.6852 0C12.0319 0 12.313 0.291665 12.313 0.651451V2.22921C13.5627 2.41258 14.55 3.43833 14.7171 4.74676L14.7896 5.31392C15.0943 7.69938 15.0679 10.1179 14.7114 12.4956C14.5348 13.6734 13.6127 14.5781 12.4695 14.6951L11.4709 14.7973C8.83004 15.0676 6.16996 15.0676 3.52909 14.7973L2.5305 14.6951C1.38733 14.5781 0.465212 13.6734 0.28859 12.4956C-0.0679506 10.1179 -0.0942675 7.69938 0.210442 5.31392L0.282888 4.74676C0.450024 3.43832 1.43734 2.41255 2.68709 2.2292V0.651451C2.68709 0.291665 2.96816 0 3.31487 0ZM3.68748 3.43341C6.22301 3.17394 8.77699 3.17394 11.3125 3.43341L12.0704 3.51097C12.7959 3.58521 13.3767 4.16802 13.4725 4.91797L13.5449 5.48512C13.5702 5.68326 13.5931 5.88164 13.6136 6.08021H1.3864C1.40689 5.88164 1.42979 5.68326 1.4551 5.48513L1.52755 4.91797C1.62334 4.16802 2.2041 3.58521 2.92959 3.51097L3.68748 3.43341ZM1.2866 7.38311C1.20442 9.0231 1.28538 10.6692 1.52921 12.2952C1.6178 12.886 2.08032 13.3398 2.65372 13.3985L3.6523 13.5007C6.21123 13.7626 8.78877 13.7626 11.3477 13.5007L12.3463 13.3985C12.9197 13.3398 13.3822 12.886 13.4708 12.2952C13.7146 10.6692 13.7956 9.0231 13.7134 7.38311H1.2866Z" fill="#92959C"/>
+                            </svg>
+                            <span class="order-card__id">#CW-2024-0009</span>
+                            <span class="order-card__date">29 Maret 2026 · 08:30</span>
+                        </div>
+                        <span class="order-card__status order-card__status--selesai">Selesai</span>
+                    </div>
+
+                    <div class="order-card__body">
+                        <div class="order-card__laundry">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="34" height="37" viewBox="0 0 34 37" fill="none">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0.343054L4.48518 26.1041V29.1715H29.4852V26.1041L33.9704 0.343054L32 0L31.3896 3.50611C30.1276 4.3627 28.4244 4.77297 26.766 4.3153C26.1496 4.14519 24.455 3.3887 23.4472 2.88484L22.9282 2.62531L22.4453 2.94721C20.9416 3.94971 19.536 4.85069 17.5 4.85069C15.4677 4.85069 13.826 3.81001 12.5616 2.95184L11.9815 2.55812L11.4136 2.96925C10.7098 3.47879 8.77563 4.49859 7.46713 4.8933C6.79568 5.09584 5.71218 5.21578 4.64555 5.21418C4.12165 5.21339 3.63028 5.18319 3.22527 5.12719C3.07992 5.10709 2.95586 5.08497 2.85181 5.06269L1.97036 0L0 0.343054ZM3.21362 7.14076L6.48518 25.9313V27.1715H27.4852V25.9313L30.9596 5.97556C29.537 6.52966 27.8846 6.69876 26.234 6.24323C25.5337 6.04998 24.1021 5.41924 23.0756 4.92877C21.6628 5.85368 19.9192 6.85069 17.5 6.85069C15.1611 6.85069 13.2764 5.81195 11.9939 4.97741C10.9537 5.61003 9.29834 6.42993 8.04473 6.80808C7.10877 7.09041 5.80612 7.21593 4.64254 7.21417C4.14957 7.21343 3.66108 7.18988 3.21362 7.14076ZM32 33H2V31H32V33ZM0 37H34V35H0V37Z" fill="black"/>
+                            </svg>
+                            <div>
+                                <p class="order-card__laundry-name">Fresh Clean Laundry</p>
+                                <div class="order-card__tags">
+                                    <span class="tag">Seprai & Selimut</span>
+                                    <span class="tag">4 kg</span>
+                                    <span class="tag">Drop-off</span>
+                                </div>
+                                <div class="order-card__address">
+                                    <svg width="13" height="13" fill="none" stroke="#e04040" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                                    Jl. Soekarno Hatta No. 12, Rajabasa, Bandar Lampung
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="order-card__foot">
+                        <div>
+                            <p class="order-card__total-label">Total Pembayaran</p>
+                            <p class="order-card__total-val">Rp 38.000</p>
+                        </div>
+                        <div class="order-card__actions">
+                            <button class="btn-rating">
+                                <svg width="14" height="14" fill="none" stroke="#f59e0b" stroke-width="2" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                Beri Rating
+                            </button>
+                            <button class="btn-primary-sm btn-primary-sm--green">
+                                <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 102.13-9.36L1 10"/></svg>
+                                Pesan Lagi
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 5: Dibatalkan -->
+                <div class="order-card order-card--dibatalkan"
+                     data-status="dibatalkan">
+                    <div class="order-card__head">
+                        <div class="order-card__id-wrap">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M3.31487 0C3.66158 0 3.94264 0.291665 3.94264 0.651451V2.09995C6.30954 1.88122 8.69051 1.88122 11.0574 2.09996V0.651451C11.0574 0.291665 11.3385 0 11.6852 0C12.0319 0 12.313 0.291665 12.313 0.651451V2.22921C13.5627 2.41258 14.55 3.43833 14.7171 4.74676L14.7896 5.31392C15.0943 7.69938 15.0679 10.1179 14.7114 12.4956C14.5348 13.6734 13.6127 14.5781 12.4695 14.6951L11.4709 14.7973C8.83004 15.0676 6.16996 15.0676 3.52909 14.7973L2.5305 14.6951C1.38733 14.5781 0.465212 13.6734 0.28859 12.4956C-0.0679506 10.1179 -0.0942675 7.69938 0.210442 5.31392L0.282888 4.74676C0.450024 3.43832 1.43734 2.41255 2.68709 2.2292V0.651451C2.68709 0.291665 2.96816 0 3.31487 0ZM3.68748 3.43341C6.22301 3.17394 8.77699 3.17394 11.3125 3.43341L12.0704 3.51097C12.7959 3.58521 13.3767 4.16802 13.4725 4.91797L13.5449 5.48512C13.5702 5.68326 13.5931 5.88164 13.6136 6.08021H1.3864C1.40689 5.88164 1.42979 5.68326 1.4551 5.48513L1.52755 4.91797C1.62334 4.16802 2.2041 3.58521 2.92959 3.51097L3.68748 3.43341ZM1.2866 7.38311C1.20442 9.0231 1.28538 10.6692 1.52921 12.2952C1.6178 12.886 2.08032 13.3398 2.65372 13.3985L3.6523 13.5007C6.21123 13.7626 8.78877 13.7626 11.3477 13.5007L12.3463 13.3985C12.9197 13.3398 13.3822 12.886 13.4708 12.2952C13.7146 10.6692 13.7956 9.0231 13.7134 7.38311H1.2866Z" fill="#92959C"/>
+                            </svg>
+                            <span class="order-card__id">#CW-2024-0008</span>
+                            <span class="order-card__date">28 Maret 2026 · 11:30</span>
+                        </div>
+                        <span class="order-card__status order-card__status--batal">Dibatalkan</span>
+                    </div>
+
+                    <div class="order-card__body">
+                        <div class="order-card__laundry">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="34" height="37" viewBox="0 0 34 37" fill="none">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0.343054L4.48518 26.1041V29.1715H29.4852V26.1041L33.9704 0.343054L32 0L31.3896 3.50611C30.1276 4.3627 28.4244 4.77297 26.766 4.3153C26.1496 4.14519 24.455 3.3887 23.4472 2.88484L22.9282 2.62531L22.4453 2.94721C20.9416 3.94971 19.536 4.85069 17.5 4.85069C15.4677 4.85069 13.826 3.81001 12.5616 2.95184L11.9815 2.55812L11.4136 2.96925C10.7098 3.47879 8.77563 4.49859 7.46713 4.8933C6.79568 5.09584 5.71218 5.21578 4.64555 5.21418C4.12165 5.21339 3.63028 5.18319 3.22527 5.12719C3.07992 5.10709 2.95586 5.08497 2.85181 5.06269L1.97036 0L0 0.343054ZM3.21362 7.14076L6.48518 25.9313V27.1715H27.4852V25.9313L30.9596 5.97556C29.537 6.52966 27.8846 6.69876 26.234 6.24323C25.5337 6.04998 24.1021 5.41924 23.0756 4.92877C21.6628 5.85368 19.9192 6.85069 17.5 6.85069C15.1611 6.85069 13.2764 5.81195 11.9939 4.97741C10.9537 5.61003 9.29834 6.42993 8.04473 6.80808C7.10877 7.09041 5.80612 7.21593 4.64254 7.21417C4.14957 7.21343 3.66108 7.18988 3.21362 7.14076ZM32 33H2V31H32V33ZM0 37H34V35H0V37Z" fill="black"/>
+                            </svg>
+                            <div>
+                                <p class="order-card__laundry-name">Wangi Laundry</p>
+                                <div class="order-card__tags">
+                                    <span class="tag">Cuci Setrika</span>
+                                    <span class="tag">2 kg</span>
+                                    <span class="tag">Antar Jemput</span>
+                                </div>
+                                <div class="order-card__address">
+                                    <svg width="13" height="13" fill="none" stroke="#e04040" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                                    Jl. Soekarno Hatta No. 12, Rajabasa, Bandar Lampung
+                                </div>
+                                <div class="order-card__alasan">
+                                    <svg width="13" height="13" fill="#f59e0b" viewBox="0 0 24 24"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13" stroke="white" stroke-width="2"/><line x1="12" y1="17" x2="12.01" y2="17" stroke="white" stroke-width="2" stroke-linecap="round"/></svg>
+                                    Alasan: Laundry tidak dapat melayani pada jam tersebut
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="order-card__foot">
+                        <div>
+                            <p class="order-card__total-label">Total Pembayaran</p>
+                            <p class="order-card__total-val order-card__total-val--batal">Rp 30.000</p>
+                        </div>
+                        <div class="order-card__actions">
+                            <button class="btn-outline-green">
+                                <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 102.13-9.36L1 10"/></svg>
+                                Pesan Lagi
+                            </button>
+                            <button class="btn-primary-sm">
+                                <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+                                Detail
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- end order-list -->
+
+        </div>
+    </main>
+
+    <!--FOOTER-->
+    <footer class="footer">
+        <div class="container footer-top">
+            <div class="footer-brand">
+                <div class="footer-brand__logo">
+                    <img src="../assets/img/CW.png" alt="Clean Wash Logo" />
+                    <div class="footer-brand__name">
+                        <span class="footer-brand__cw">CW</span>
+                        <span class="footer-brand__cleanwash">Clean Wash</span>
+                    </div>
+                </div>
+                <p class="footer-brand__desc">Platform digital yang membantu Anda menemukan layanan laundry terpercaya dengan mudah dan praktis</p>
+            </div>
+            <div class="footer-divider"></div>
+            <div class="footer-contact">
+                <span class="footer-col__title">Kontak Kami</span>
+                <a href="mailto:cleanwash@gmail.com" class="footer-contact__item">
+                    <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 7l10 7 10-7"/></svg>
+                    cleanwash@gmail.com
+                </a>
+                <a href="tel:+628881-0102" class="footer-contact__item">
+                    <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 01.22 2.18 2 2 0 012.18 0h3a2 2 0 012 1.72c.13 1 .37 1.97.72 2.9a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.18-1.18a2 2 0 012.11-.45c.93.35 1.9.59 2.9.72A2 2 0 0122 16.92z"/></svg>
+                    +62-8881-0102
+                </a>
+            </div>
+            <div class="footer-divider"></div>
+            <div class="footer-social">
+                <span class="footer-col__title">Ikuti Kami</span>
+                <div class="footer-social__icons">
+                    <a href="#" class="footer-social__icon" aria-label="Facebook">
+                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+                    </a>
+                    <a href="#" class="footer-social__icon" aria-label="Instagram">
+                        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+                    </a>
+                    <a href="#" class="footer-social__icon" aria-label="TikTok">
+                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.79 1.53V6.75a4.85 4.85 0 01-1.02-.06z"/></svg>
+                    </a>
+                    <a href="#" class="footer-social__icon" aria-label="X">
+                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container footer-bottom__wrapper">
+                <span class="footer-bottom__copy">
+                    <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M15 9.354a4 4 0 100 5.292"/></svg>
+                    2026 Clean Wash
+                </span>
+                <div class="footer-bottom__links">
+                    <a href="#">Kebijakan Privasi</a>
+                    <a href="#">Syarat & Ketentuan</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

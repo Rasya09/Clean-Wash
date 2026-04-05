@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cari Laundry - Clean Wash</title>
     <link rel="stylesheet" href="home.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" />
     <link rel="stylesheet" href="../css/cari_laundry.css">
 </head>
 <body>
@@ -19,10 +22,27 @@
                 <a href="home.html">Beranda</a>
                 <a href="cari-laundry.html" class="active">Cari Laundry</a>
                 <a href="layanan.html">Layanan</a>
-                <a href="#">Pesanan Saya</a>
+                <a href="riwayat_pesanan.html">Pesanan Saya</a>
             </nav>
-            <div class="nav-actions">
-                <a href="#" class="btn-login">Login</a>
+            <div class="nav-profile">
+                <div class="nav-profile__avatar-wrap">
+                    <img src="../Assets/Icon/Avatar.png" alt="Rizky Pratama" class="nav-profile__avatar" />
+                    <div class="nav-profile__dropdown">
+                        <div class="nav-profile__info">
+                            <span class="nav-profile__name">Rizky Pratama</span>
+                            <span class="nav-profile__email"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="f2809b88998bb2978a939f829e97dc919d9f">[email&#160;protected]</a></span>
+                        </div>
+                        <div class="nav-profile__divider"></div>
+                        <a href="ProfileCustomer.html" class="nav-profile__item">
+                            <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                            Detail Profil
+                        </a>
+                        <a href="#" class="nav-profile__item nav-profile__item--logout">
+                            <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 21H5a2 2 0 01-2-2V5a2 2 0 012-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+                            Logout
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
     </header>
@@ -113,7 +133,7 @@
                         </div>
                         <div class="card-grid__footer">
                             <span class="card-grid__price">Rp 7.000 <span class="card-grid__per">/kg</span></span>
-                            <button class="btn-detail">Lihat Detail</button>
+                            <button class="btn-detail"><a href="detail-laundry.html">Lihat Detail</a></button>
                         </div>
                     </div>
                 </div>
@@ -128,7 +148,7 @@
                         </div>
                         <div class="card-grid__footer">
                             <span class="card-grid__price">Rp 5.000 <span class="card-grid__per">/kg</span></span>
-                            <button class="btn-detail">Lihat Detail</button>
+                            <button class="btn-detail"><a href="detail-laundry.html">Lihat Detail</a></button>
                         </div>
                     </div>
                 </div>
@@ -143,7 +163,7 @@
                         </div>
                         <div class="card-grid__footer">
                             <span class="card-grid__price">Rp 7.000 <span class="card-grid__per">/kg</span></span>
-                            <button class="btn-detail">Lihat Detail</button>
+                            <button class="btn-detail"><a href="detail-laundry.html">Lihat Detail</a></button>
                         </div>
                     </div>
                 </div>
@@ -158,73 +178,12 @@
                         </div>
                         <div class="card-grid__footer">
                             <span class="card-grid__price">Rp 5.000 <span class="card-grid__per">/kg</span></span>
-                            <button class="btn-detail">Lihat Detail</button>
+                            <button class="btn-detail"><a href="detail-laundry.html">Lihat Detail</a></button>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="results-grid">
-                <div class="card-grid">
-                    <img src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/cJbMtcrhbu/vpjq3z1v_expires_30_days.png" alt="UBR Laundry" class="card-grid__img" />
-                    <div class="card-grid__body">
-                        <span class="card-grid__name">UBR Laundry</span>
-                        <div class="card-grid__meta">
-                            <span class="stars">★★★★★</span>
-                            <span class="card-grid__rating">5.0</span>
-                            <span class="card-grid__dist">1-2 km</span>
-                        </div>
-                        <div class="card-grid__footer">
-                            <span class="card-grid__price">Rp 7.000 <span class="card-grid__per">/kg</span></span>
-                            <button class="btn-detail">Lihat Detail</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="card-grid">
-                    <img src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/cJbMtcrhbu/nkyyacsq_expires_30_days.png" alt="Sorcha Laundry" class="card-grid__img" />
-                    <div class="card-grid__body">
-                        <span class="card-grid__name">Sorcha Laundry Arcamanik</span>
-                        <div class="card-grid__meta">
-                            <span class="stars">★★★★★</span>
-                            <span class="card-grid__rating">5.0</span>
-                            <span class="card-grid__dist">1-2 km</span>
-                        </div>
-                        <div class="card-grid__footer">
-                            <span class="card-grid__price">Rp 5.000 <span class="card-grid__per">/kg</span></span>
-                            <button class="btn-detail">Lihat Detail</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="card-grid">
-                    <img src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/cJbMtcrhbu/ao9ji4iu_expires_30_days.png" alt="Laundry Express" class="card-grid__img" />
-                    <div class="card-grid__body">
-                        <span class="card-grid__name">Laundry Express Bandung</span>
-                        <div class="card-grid__meta">
-                            <span class="stars">★★★★★</span>
-                            <span class="card-grid__rating">5.0</span>
-                            <span class="card-grid__dist">1-2 km</span>
-                        </div>
-                        <div class="card-grid__footer">
-                            <span class="card-grid__price">Rp 7.000 <span class="card-grid__per">/kg</span></span>
-                            <button class="btn-detail">Lihat Detail</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="card-grid">
-                    <img src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/cJbMtcrhbu/5gfqb427_expires_30_days.png" alt="Molaundry" class="card-grid__img" />
-                    <div class="card-grid__body">
-                        <span class="card-grid__name">Molaundry</span>
-                        <div class="card-grid__meta">
-                            <span class="stars">★★★★★</span>
-                            <span class="card-grid__rating">5.0</span>
-                            <span class="card-grid__dist">1-2 km</span>
-                        </div>
-                        <div class="card-grid__footer">
-                            <span class="card-grid__price">Rp 5.000 <span class="card-grid__per">/kg</span></span>
-                            <button class="btn-detail">Lihat Detail</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            
 
             <!-- ── HASIL LIST ── -->
             <div class="results-list">

@@ -52,7 +52,10 @@ body {
     justify-content: space-between;
 }
 
-.logo img { width: 160px; height: auto; }
+.logo img { 
+    width: 160px; 
+    height: auto; 
+}
 
 .nav-menu {
     display: flex;

@@ -219,6 +219,14 @@ html, body {
   transition: background 0.2s, transform 0.1s;
 }
 
+.btn-login a {
+  color: var(--white);
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
 .btn-login:hover {
   background: var(--primary-hover);
 }
