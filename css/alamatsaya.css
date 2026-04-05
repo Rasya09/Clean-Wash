@@ -1,6 +1,14 @@
-/* =============================================
-   alamatsaya.css — Halaman Alamat Saya
-   ============================================= */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #ffffff;
+    color: #111;
+}
 
 /* ── Variables ── */
 :root {
@@ -31,6 +39,12 @@
     max-width: 1400px;
     margin: 28px auto;
     align-items: flex-start;
+}
+
+.container {
+    width: 90%;
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
 /* ── Sidebar wrapper (tidak ada styling card di sini) ── */
