@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -28,7 +28,6 @@
 
     <div class="layout">
 
-        <!-- SIDEBAR -->
         <aside class="sidebar">
             <div class="profile-banner"></div>
             <div class="profile-avatar">
@@ -48,11 +47,11 @@
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
                     Alamat Saya
                 </a>
-                <a href="#" class="nav-item">
+                <a href="RiwayatPesanan.html" class="nav-item">
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/></svg>
                     Riwayat Pesanan
                 </a>
-                <a href="#" class="nav-item">
+                <a href="KeamananAkun.html" class="nav-item">
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
                     Keamanan Akun
                 </a>
@@ -63,10 +62,8 @@
             </nav>
         </aside>
 
-        <!-- KONTEN UTAMA -->
         <main class="main-content">
 
-            <!-- Header halaman -->
             <div class="page-header">
                 <div>
                     <h1 class="page-title">Alamat Saya</h1>
@@ -75,15 +72,14 @@
                 <button class="btn-tambah">+ Tambah Alamat</button>
             </div>
 
-            <!-- Statistik -->
             <div class="stats-row">
                 <div class="stat-card">
                     <div class="stat-icon red">
                         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
                     </div>
                     <div>
-                        <div class="stat-number">2</div>
-                        <div class="stat-label">Total Alamat</div>
+                        <p class="stat-number">2</p>
+                        <p class="stat-label">Total Alamat</p>
                     </div>
                 </div>
                 <div class="stat-card">
@@ -91,22 +87,25 @@
                         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
                     </div>
                     <div>
-                        <div class="stat-number">1</div>
-                        <div class="stat-label">Alamat Utama</div>
+                        <p class="stat-number">1</p>
+                        <p class="stat-label">Alamat Utama</p>
                     </div>
                 </div>
                 <div class="stat-card">
                     <div class="stat-icon teal">
-                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/><path d="M9 12l2 2 4-4"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M8 22C8.55228 22 9 21.5523 9 21C9 20.4477 8.55228 20 8 20C7.44772 20 7 20.4477 7 21C7 21.5523 7.44772 22 8 22Z" stroke="#2ab5a0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M19 22C19.5523 22 20 21.5523 20 21C20 20.4477 19.5523 20 19 20C18.4477 20 18 20.4477 18 21C18 21.5523 18.4477 22 19 22Z" stroke="#2ab5a0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M2.05005 2.0498H4.05005L6.71005 14.4698C6.80763 14.9247 7.06072 15.3313 7.42576 15.6197C7.7908 15.908 8.24495 16.0602 8.71005 16.0498H18.49C18.9452 16.0491 19.3865 15.8931 19.7411 15.6076C20.0956 15.3222 20.3422 14.9243 20.4401 14.4798L22.09 7.0498H5.12005" stroke="#2ab5a0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
                     </div>
                     <div>
-                        <div class="stat-number">12</div>
-                        <div class="stat-label">Total Pesanan</div>
+                        <p class="stat-number">12</p>
+                        <p class="stat-label">Total Pesanan</p>
                     </div>
                 </div>
             </div>
 
-            <!-- Search & Filter -->
             <div class="search-filter-row">
                 <div class="search-box">
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#aaa" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
@@ -119,20 +118,18 @@
                 </div>
             </div>
 
-            <!-- Grid Alamat -->
             <div class="address-grid">
 
-                <!-- Alamat Utama -->
                 <div class="address-card primary">
                     <div class="address-card-header">
                         <div class="address-card-icon">
                             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#6d93f2" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
                         </div>
-                        <div>
-                            <div class="address-card-title">Rumah</div>
+                        <div class="address-card-info">
+                            <p class="address-card-title">Rumah</p>
                             <span class="badge-utama">&#9733; Alamat Utama</span>
                         </div>
-                        <button class="btn-dots">
+                        <button class="btn-dots" aria-label="Opsi">
                             <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="5" r="1.5"/><circle cx="12" cy="12" r="1.5"/><circle cx="12" cy="19" r="1.5"/></svg>
                         </button>
                     </div>
@@ -140,11 +137,16 @@
                     <p class="address-detail-text">Rajabasa, Bandar Lampung, 35142</p>
                     <div class="address-tags">
                         <span class="address-tag">
-                            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M15 21V13C15 12.7348 14.8946 12.4804 14.7071 12.2929C14.5196 12.1054 14.2652 12 14 12H10C9.73478 12 9.48043 12.1054 9.29289 12.2929C9.10536 12.4804 9 12.7348 9 13V21" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M3 9.99999C2.99993 9.70906 3.06333 9.42161 3.18579 9.15771C3.30824 8.8938 3.4868 8.65979 3.709 8.47199L10.709 2.47199C11.07 2.1669 11.5274 1.99951 12 1.99951C12.4726 1.99951 12.93 2.1669 13.291 2.47199L20.291 8.47199C20.5132 8.65979 20.6918 8.8938 20.8142 9.15771C20.9367 9.42161 21.0001 9.70906 21 9.99999V19C21 19.5304 20.7893 20.0391 20.4142 20.4142C20.0391 20.7893 19.5304 21 19 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V9.99999Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
                             Bandar Lampung
                         </span>
                         <span class="address-tag">
-                            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M7 8h10M7 12h5"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="19" height="16" viewBox="0 0 19 16" fill="none">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.192702 3.90005C-0.0874415 6.50294 -0.074954 9.50493 0.314869 12.0973C0.530567 13.5316 1.70124 14.6313 3.14631 14.7569L4.65654 14.8882C7.80558 15.1619 10.9724 15.1619 14.1215 14.8882L15.6317 14.7569C17.0768 14.6313 18.2475 13.5316 18.4632 12.0973C18.853 9.50492 18.8655 6.50311 18.5853 3.90021C18.5491 3.59844 18.5084 3.29709 18.4632 2.99624C18.2475 1.56185 17.0768 0.462204 15.6317 0.336587L14.1215 0.205305C10.9724 -0.0684352 7.80558 -0.0684351 4.65654 0.205306L3.14631 0.336587C1.70124 0.462204 0.530567 1.56185 0.314869 2.99624C0.269637 3.29704 0.228914 3.59834 0.192702 3.90005ZM4.78644 1.69967C7.84905 1.43344 10.929 1.43344 13.9916 1.69967L15.5018 1.83095C16.2562 1.89652 16.8672 2.47054 16.9798 3.2193C16.9915 3.29705 17.0029 3.37485 17.014 3.45267L11.453 6.54212C10.1694 7.25523 8.60859 7.25523 7.325 6.54212L1.76406 3.45271C1.77512 3.37487 1.7865 3.29707 1.79819 3.2193C1.91079 2.47054 2.52188 1.89652 3.27621 1.83095L4.78644 1.69967ZM17.1975 5.06664C17.3915 7.33439 17.3189 9.61924 16.9798 11.8742C16.8672 12.623 16.2562 13.197 15.5018 13.2625L13.9916 13.3938C10.929 13.6601 7.84905 13.6601 4.78644 13.3938L3.27621 13.2625C2.52188 13.197 1.91079 12.623 1.79819 11.8742C1.4591 9.61925 1.38654 7.33442 1.58051 5.06668L6.59653 7.85336C8.33316 8.81815 10.4448 8.81815 12.1814 7.85336L17.1975 5.06664Z" fill="#60646E"/>
+                            </svg>
                             35142
                         </span>
                     </div>
@@ -154,17 +156,31 @@
                     </div>
                 </div>
 
-                <!-- Alamat Lainnya -->
                 <div class="address-card">
                     <div class="address-card-header">
                         <div class="address-card-icon gray">
-                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#888" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-4 0v2"/><line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="24" viewBox="0 0 22 24" fill="none">
+                                <path d="M1 1V22.9997H10.8621L10.7242 1H1Z" fill="#B5B7BC" stroke="#414652" stroke-width="2"/>
+                                <rect x="3.37918" y="3.01053" width="1.17242" height="1.51818" fill="white" stroke="#414652" stroke-width="1.17242"/>
+                                <rect x="7.51736" y="3.01053" width="1.17242" height="1.51818" fill="white" stroke="#414652" stroke-width="1.17242"/>
+                                <rect x="3.37918" y="8.47098" width="1.17242" height="1.51818" fill="white" stroke="#414652" stroke-width="1.17242"/>
+                                <rect x="7.51736" y="8.47098" width="1.17242" height="1.51818" fill="white" stroke="#414652" stroke-width="1.17242"/>
+                                <rect x="3.37918" y="14.0105" width="1.17242" height="1.51818" fill="white" stroke="#414652" stroke-width="1.17242"/>
+                                <rect x="7.51736" y="14.0105" width="1.17242" height="1.51818" fill="white" stroke="#414652" stroke-width="1.17242"/>
+                                <rect x="3.37918" y="19.5501" width="1.17242" height="1.51818" fill="white" stroke="#414652" stroke-width="1.17242"/>
+                                <rect x="7.51736" y="19.5501" width="1.17242" height="1.51818" fill="white" stroke="#414652" stroke-width="1.17242"/>
+                                <path d="M11.207 6.38135V22.9998H21.0002L20.8632 6.38135H11.207Z" stroke="#414652" stroke-width="2"/>
+                                <rect x="13.4485" y="11.241" width="1.17242" height="1.51818" fill="black" stroke="#414652" stroke-width="1.17242"/>
+                                <rect x="17.5865" y="11.241" width="1.17242" height="1.51818" fill="black" stroke="#414652" stroke-width="1.17242"/>
+                                <rect x="13.4485" y="16.7805" width="1.17242" height="1.51818" fill="black" stroke="#414652" stroke-width="1.17242"/>
+                                <rect x="17.5862" y="16.7805" width="1.17242" height="1.51818" fill="black" stroke="#414652" stroke-width="1.17242"/>
+                            </svg>
                         </div>
-                        <div>
-                            <div class="address-card-title">Kos / Rumah Sewa</div>
+                        <div class="address-card-info">
+                            <p class="address-card-title">Kos / Rumah Sewa</p>
                             <span class="badge-lainnya">Alamat Lainnya</span>
                         </div>
-                        <button class="btn-dots">
+                        <button class="btn-dots" aria-label="Opsi">
                             <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="5" r="1.5"/><circle cx="12" cy="12" r="1.5"/><circle cx="12" cy="19" r="1.5"/></svg>
                         </button>
                     </div>
@@ -172,11 +188,28 @@
                     <p class="address-detail-text">Kedaton, Bandar Lampung, 35148</p>
                     <div class="address-tags">
                         <span class="address-tag">
-                            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="24" viewBox="0 0 22 24" fill="none">
+                                <path d="M1 1V22.9997H10.8621L10.7242 1H1Z" fill="#B5B7BC" stroke="#414652" stroke-width="2"/>
+                                <rect x="3.37918" y="3.01053" width="1.17242" height="1.51818" fill="white" stroke="#414652" stroke-width="1.17242"/>
+                                <rect x="7.51736" y="3.01053" width="1.17242" height="1.51818" fill="white" stroke="#414652" stroke-width="1.17242"/>
+                                <rect x="3.37918" y="8.47098" width="1.17242" height="1.51818" fill="white" stroke="#414652" stroke-width="1.17242"/>
+                                <rect x="7.51736" y="8.47098" width="1.17242" height="1.51818" fill="white" stroke="#414652" stroke-width="1.17242"/>
+                                <rect x="3.37918" y="14.0105" width="1.17242" height="1.51818" fill="white" stroke="#414652" stroke-width="1.17242"/>
+                                <rect x="7.51736" y="14.0105" width="1.17242" height="1.51818" fill="white" stroke="#414652" stroke-width="1.17242"/>
+                                <rect x="3.37918" y="19.5501" width="1.17242" height="1.51818" fill="white" stroke="#414652" stroke-width="1.17242"/>
+                                <rect x="7.51736" y="19.5501" width="1.17242" height="1.51818" fill="white" stroke="#414652" stroke-width="1.17242"/>
+                                <path d="M11.207 6.38135V22.9998H21.0002L20.8632 6.38135H11.207Z" stroke="#414652" stroke-width="2"/>
+                                <rect x="13.4485" y="11.241" width="1.17242" height="1.51818" fill="black" stroke="#414652" stroke-width="1.17242"/>
+                                <rect x="17.5865" y="11.241" width="1.17242" height="1.51818" fill="black" stroke="#414652" stroke-width="1.17242"/>
+                                <rect x="13.4485" y="16.7805" width="1.17242" height="1.51818" fill="black" stroke="#414652" stroke-width="1.17242"/>
+                                <rect x="17.5862" y="16.7805" width="1.17242" height="1.51818" fill="black" stroke="#414652" stroke-width="1.17242"/>
+                            </svg>
                             Bandar Lampung
                         </span>
                         <span class="address-tag">
-                            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M7 8h10M7 12h5"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="19" height="16" viewBox="0 0 19 16" fill="none">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.192702 3.90005C-0.0874415 6.50294 -0.074954 9.50493 0.314869 12.0973C0.530567 13.5316 1.70124 14.6313 3.14631 14.7569L4.65654 14.8882C7.80558 15.1619 10.9724 15.1619 14.1215 14.8882L15.6317 14.7569C17.0768 14.6313 18.2475 13.5316 18.4632 12.0973C18.853 9.50492 18.8655 6.50311 18.5853 3.90021C18.5491 3.59844 18.5084 3.29709 18.4632 2.99624C18.2475 1.56185 17.0768 0.462204 15.6317 0.336587L14.1215 0.205305C10.9724 -0.0684352 7.80558 -0.0684351 4.65654 0.205306L3.14631 0.336587C1.70124 0.462204 0.530567 1.56185 0.314869 2.99624C0.269637 3.29704 0.228914 3.59834 0.192702 3.90005ZM4.78644 1.69967C7.84905 1.43344 10.929 1.43344 13.9916 1.69967L15.5018 1.83095C16.2562 1.89652 16.8672 2.47054 16.9798 3.2193C16.9915 3.29705 17.0029 3.37485 17.014 3.45267L11.453 6.54212C10.1694 7.25523 8.60859 7.25523 7.325 6.54212L1.76406 3.45271C1.77512 3.37487 1.7865 3.29707 1.79819 3.2193C1.91079 2.47054 2.52188 1.89652 3.27621 1.83095L4.78644 1.69967ZM17.1975 5.06664C17.3915 7.33439 17.3189 9.61924 16.9798 11.8742C16.8672 12.623 16.2562 13.197 15.5018 13.2625L13.9916 13.3938C10.929 13.6601 7.84905 13.6601 4.78644 13.3938L3.27621 13.2625C2.52188 13.197 1.91079 12.623 1.79819 11.8742C1.4591 9.61925 1.38654 7.33442 1.58051 5.06668L6.59653 7.85336C8.33316 8.81815 10.4448 8.81815 12.1814 7.85336L17.1975 5.06664Z" fill="#60646E"/>
+                            </svg>
                             35148
                         </span>
                     </div>
