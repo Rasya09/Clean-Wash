@@ -29,15 +29,21 @@
     <div class="layout">
 
         <aside class="sidebar">
-            <div class="profile-banner"></div>
-            <div class="profile-avatar">
-                <img src="../Assets/Icon/Avatar.png" alt="Avatar" />
+
+            <!-- Card 1: Profile -->
+            <div class="profile-card">
+                <div class="profile-banner"></div>
+                <div class="profile-avatar">
+                    <img src="../Assets/Icon/Avatar.png" alt="Avatar" />
+                </div>
+                <div class="profile-info">
+                    <h3 class="profile-name">Rizky Pratama</h3>
+                    <p class="profile-email">rizky@example.com</p>
+                    <span class="profile-badge">Customer Aktif</span>
+                </div>
             </div>
-            <div class="profile-info">
-                <h3 class="profile-name">Rizky Pratama</h3>
-                <p class="profile-email">rizky@example.com</p>
-                <span class="profile-badge">Customer Aktif</span>
-            </div>
+
+            <!-- Card 2: Nav -->
             <nav class="sidebar-nav">
                 <a href="ProfileCustomer.html" class="nav-item">
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
@@ -60,6 +66,7 @@
                     Logout
                 </a>
             </nav>
+
         </aside>
 
         <main class="main-content">
@@ -69,7 +76,7 @@
                     <h1 class="page-title">Alamat Saya</h1>
                     <p class="page-subtitle">Kelola semua alamat pickup dan pengiriman laundry Anda.</p>
                 </div>
-                <button class="btn-tambah">+ Tambah Alamat</button>
+                <button class="btn-tambah" data-open="popup-alamat">+ Tambah Alamat</button>
             </div>
 
             <div class="stats-row">
@@ -220,9 +227,75 @@
                 </div>
 
             </div>
-
         </main>
     </div>
+
+    <!-- Overlay Tambah Alamat -->
+    <div class="overlay hidden" id="overlay">
+        <div class="modal">
+            <div>
+                <p class="section-label">Ikon Alamat</p>
+                <div class="icon-picker">
+                    <div class="icon-option selected" data-icon="rumah">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9.5L12 3l9 6.5V20a1 1 0 01-1 1H4a1 1 0 01-1-1V9.5z"/><path d="M9 21V12h6v9"/></svg>
+                    </div>
+                    <div class="icon-option" data-icon="kantor">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="18" rx="1"/><path d="M9 3v18M2 9h20M2 15h20"/></svg>
+                    </div>
+                </div>
+            </div>
+            <div class="form-grid">
+                <div class="form-group">
+                    <label>Label Alamat <span class="req">*</span></label>
+                    <input type="text" placeholder="Contoh: Rumah, Kantor, Kos..." />
+                </div>
+                <div class="form-group">
+                    <label>Penerima <span class="req">*</span></label>
+                    <input type="text" placeholder="Nama penerima..." />
+                </div>
+                <div class="form-group full">
+                    <label>Alamat Lengkap <span class="req">*</span></label>
+                    <textarea placeholder="Nama jalan, nomor rumah, RT/RW..."></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Kelurahan / Kecamatan</label>
+                    <input type="text" placeholder="Contoh: Rajabasa" />
+                </div>
+                <div class="form-group">
+                    <label>Kota <span class="req">*</span></label>
+                    <input type="text" placeholder="Contoh: Bandar Lampung" />
+                </div>
+                <div class="form-group">
+                    <label>Kode Pos</label>
+                    <input type="text" placeholder="Contoh: 35142" />
+                </div>
+                <div class="form-group">
+                    <label>Nomor HP</label>
+                    <input type="tel" placeholder="+62 812-xxxx-xxxx" />
+                </div>
+                <div class="form-group full">
+                    <label>Catatan untuk Driver (opsional)</label>
+                    <input type="text" placeholder="Contoh: Patokan depan Indomaret, pagar biru..." />
+                </div>
+            </div>
+            <div class="toggle-row">
+                <div class="toggle-text">
+                    <strong>Jadikan Alamat Utama</strong>
+                    <span>Alamat ini akan otomatis dipilih saat order</span>
+                </div>
+                <label class="toggle">
+                    <input type="checkbox" />
+                    <span class="toggle-track"></span>
+                </label>
+            </div>
+            <div class="modal-footer">
+                <button class="btn-batal" id="btn-batal">Batal</button>
+                <button class="btn-simpan">Simpan Alamat</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/popup-alamat.js"></script>
 
 </body>
 </html>
