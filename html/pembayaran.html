@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pembayaran | CleanWash</title>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@400,0&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/pembayaran.css" />
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="nav-container nav-wrapper">
+            <div class="logo">
+                <img src="../assets/img/CW.png" alt="Clean Wash Logo" />
+            </div>
+            <nav class="nav-menu">
+                <a href="#">Beranda</a>
+                <a href="#">Cari Laundry</a>
+                <a href="#">Layanan</a>
+                <a href="#">Pesanan Saya</a>
+            </nav>
+            <div class="nav-actions">
+                <a href="#" class="btn-login">Login</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="page-title-section">
+        <h2>CleanWash</h2>
+        <h1>Pembayaran</h1>
+    </div>
+
+    <main class="container">
+        <div class="left-column">
+            <!-- Address Card -->
+            <section class="address-card">
+                <div class="address-icon-bg">
+                    <img alt="Delivery"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAbow42IL8rRS0xPACbHY4t9BEOceUHT-Bu5sNttZzDJZq2l7mE1drWT5exPT93CLlxEM49oGfxg35pVycKNCZW55LLKdFsZ92qQVlX_rW1wtqfhflvVY05g3XXflQHkxhEueDDEaEdizOxD6A3PRiZHtuBYUg4-HdGIPymVhgHtJebZHR3i4ut4L1Y-18TAw8-fjQB9Nx4tZCAOHS5ioz7ORUspMvyN4l5qwCWAgPVpxMT6bX_U5fr2qO3oiqrbrwcyWWgsBTwu8k" />
+                </div>
+                <div class="address-details">
+                    <span class="material-symbols-outlined icon">location_on</span>
+                    <div class="address-text">
+                        <h3>Budi Santoso</h3>
+                        <p>Jl. Gembong No. 7, Sukamulya, Kec. Cinambo, Kota Bandung, 40294</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Rincian Layanan Card -->
+            <section class="service-details-card">
+                <h2>Rincian Layanan</h2>
+                <div class="order-items">
+                    <div class="item-row">
+                        <div class="item-info">
+                            <h4>Cuci Kiloan</h4>
+                            <p>3 kg &bull; Rp 7.000/kg</p>
+                        </div>
+                        <span class="item-price">Rp 21.000</span>
+                    </div>
+
+                    <div class="item-row">
+                        <div class="item-info">
+                            <h4>Cuci Sepatu</h4>
+                            <p>1 pasang</p>
+                        </div>
+                        <span class="item-price">Rp 25.000</span>
+                    </div>
+
+                    <div class="item-row instruksi-box">
+                        <div class="item-info">
+                            <h4>Instruksi:</h4>
+                            <p>"Cuci dengan pewangi pakaian yang soft, jangan dijemur langsung kena matahari"</p>
+                        </div>
+                    </div>
+
+                    <div class="summary-row">
+                        <span>Subtotal</span>
+                        <span>Rp 46.000</span>
+                    </div>
+
+                    <div class="summary-row">
+                        <span>Biaya Antar Jemput</span>
+                        <span>Rp 10.000</span>
+                    </div>
+
+                    <div class="summary-row"
+                        style="border-bottom: 1px solid var(--border-color); padding-bottom: 16px;">
+                        <span>Ekstra Layanan</span>
+                        <span>Rp 5.000</span>
+                    </div>
+
+                    <div class="total-row">
+                        <span>Total Pembayaran</span>
+                        <span class="total-price">Rp 61.000</span>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div class="right-column">
+            <div class="payment-card">
+                <div class="payment-methods">
+                    <label class="method-option">
+                        <input type="radio" name="payment_method" value="online" checked />
+                        <div class="method-box">
+                            <span class="material-symbols-outlined icon">credit_card</span>
+                            <h4>Bayar Sekarang</h4>
+                            <p>Pembayaran online instan</p>
+                        </div>
+                    </label>
+
+                    <label class="method-option">
+                        <input type="radio" name="payment_method" value="cod" />
+                        <div class="method-box">
+                            <span class="material-symbols-outlined icon">handshake</span>
+                            <h4>Bayar Setelah Selesai</h4>
+                            <p>COD / Bayar nanti</p>
+                        </div>
+                    </label>
+                </div>
+
+                <div class="action-section">
+                    <a href="#" id="btn-lanjut" class="btn-primary" style="text-decoration: none;">
+                        Lanjutkan Pembayaran
+                        <span class="material-symbols-outlined icon">arrow_forward</span>
+                    </a>
+
+                    <p class="security-note">Aman &amp; Terenkripsi. 256-bit SSL Protection.</p>
+                    <p class="terms-note">
+                        Dengan melanjutkan, Anda menyetujui Ketentuan Layanan &amp; Kebijakan Privasi CleanWash.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        document.getElementById('btn-lanjut').addEventListener('click', function(e) {
+            e.preventDefault();
+            const selectedMethod = document.querySelector('input[name="payment_method"]:checked');
+            
+            if (selectedMethod) {
+                if (selectedMethod.value === 'online') {
+                    window.location.href = 'transfer.html';
+                } else if (selectedMethod.value === 'cod') {
+                    window.location.href = 'berhasil.html';
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>

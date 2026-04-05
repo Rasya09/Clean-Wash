@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pembayaran Berhasil | CleanWash</title>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@400,0&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/pembayaran.css" />
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="nav-container nav-wrapper">
+            <div class="logo">
+                <img src="../assets/img/CW.png" alt="Clean Wash Logo" />
+            </div>
+            <nav class="nav-menu">
+                <a href="#">Beranda</a>
+                <a href="#">Cari Laundry</a>
+                <a href="#">Layanan</a>
+                <a href="#">Pesanan Saya</a>
+            </nav>
+            <div class="nav-actions">
+                <a href="#" class="btn-login">Login</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="page-modal-wrapper">
+        <div class="success-modal-container">
+            <div class="success-bg-shape-1"></div>
+            <div class="success-bg-shape-2"></div>
+            
+            <div class="success-icon-wrapper">
+                <div class="success-icon-bg">
+                    <span class="material-symbols-outlined icon">check_circle</span>
+                </div>
+                <!-- Since JS is removed, CSS animations handle the ripple effect nicely -->
+                <div class="success-ripple"></div>
+            </div>
+            
+            <h1 class="success-title">Pembayaran Dikonfirmasi!</h1>
+            <p id="success-desc" class="success-desc">
+                Terima kasih! Pembayaran Anda telah berhasil diverifikasi. Proses pencucian akan segera dimulai.
+            </p>
+            
+            <div class="success-details">
+                <div class="success-detail-card">
+                    <div class="success-detail-icon">
+                        <span class="material-symbols-outlined icon">payments</span>
+                    </div>
+                    <div class="success-detail-text">
+                        <label>Status</label>
+                        <p id="success-method">Berhasil</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="success-actions">
+                <a href="#" class="btn-primary-pill">Lihat Pesanan Saya</a>
+                <!-- Link back to home assuming index is an available route or back to previous page -->
+                <a href="pembayaran.html" id="btn-back-home" class="btn-secondary">Kembali ke Pembayaran</a>
+            </div>
+        </div>
+    </main>
+
+</body>
+
+</html>

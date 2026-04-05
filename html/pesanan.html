@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Membuat Pesanan - Clean Wash</title>
+    <link rel="stylesheet" href="../css/pesanan.css">
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="container nav-wrapper">
+            <div class="logo">
+                <img src="../assets/img/CW.png" alt="Clean Wash Logo" />
+            </div>
+            <nav class="nav-menu">
+                <a href="#">Beranda</a>
+                <a href="#">Cari Laundry</a>
+                <a href="#">Layanan</a>
+                <a href="#">Pesanan Saya</a>
+            </nav>
+            <div class="nav-actions">
+                <a href="#" class="btn-login">Login</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container page-content">
+        <!-- Store Info -->
+        <section class="store-info card">
+            <img class="store-img" src="../assets/img/moLaundry.png" alt="MoLAUNDRY"
+                onerror="this.src='../../assets/img/unnamed-2-1.png';">
+            <div class="store-details">
+                <h2>Laundry MoLAUNDRY</h2>
+                <div class="store-meta">
+                    <span class="rating">⭐ 4.8</span>
+                    <span class="distance">📍 1.2 km</span>
+                </div>
+                <p class="address">Jl. Soekarno Hatta, Bandung</p>
+            </div>
+        </section>
+
+        <!-- Order Form Group as a HTML Form -->
+        <form action="ringkasan-pesanan.html" class="order-form card">
+            <div class="layanan-section" id="layanan-container">
+                <div class="layanan-group group-1">
+                    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom: 16px;">
+                        <h3 style="margin:0;">Pilih Layanan</h3>
+                        <button type="button" class="btn-remove-layanan" title="Hapus Pesanan" aria-label="Hapus Pesanan">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+                                <line x1="10" y1="11" x2="10" y2="17"></line><line x1="14" y1="11" x2="14" y2="17"></line>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="layanan-options main-layanan-options">
+                        <button type="button" class="layanan-btn">Cuci Kiloan</button>
+                        <button type="button" class="layanan-btn">Cuci Satuan</button>
+                        <button type="button" class="layanan-btn">Cuci Karpet</button>
+                        <button type="button" class="layanan-btn">Cuci Tas</button>
+                        <button type="button" class="layanan-btn">Cuci Sepatu</button>
+                    </div>
+                    <div class="paket-section" style="margin-top: 16px; display: none;">
+                        <h3 style="font-size: 16px; margin-bottom: 12px; color: #444;">Pilih Paket</h3>
+                        <div class="layanan-options">
+                            <button type="button" class="layanan-btn">Cuci Saja</button>
+                            <button type="button" class="layanan-btn">Cuci + Setrika</button>
+                            <button type="button" class="layanan-btn">Express</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tambah-pesanan" id="add-order-container">
+                    <button type="button" class="btn-text" id="btn-tambah-pesanan">+ Tambah Pesanan</button>
+                </div>
+            </div>
+
+            <!-- Upload Foto Native -->
+            <div class="upload-section">
+                <div class="upload-header">
+                    <h3>Foto Barang</h3>
+                    <p>Upload foto pakaian/barang yang akan dicuci</p>
+                </div>
+                <div class="upload-box" id="upload-box" style="padding: 20px; cursor: pointer;">
+                    <span id="upload-text" style="display:block; margin-bottom: 8px;">Klik di sini untuk upload foto</span>
+                    <span class="upload-hint" id="upload-hint" style="display:block; font-size:12px; color:#666;">JPG, PNG maksimal 5MB</span>
+                    <input type="file" id="foto-barang" name="foto_barang" accept="image/jpeg, image/png" style="display:none;">
+                </div>
+            </div>
+
+            <!-- Antar Jemput Detail Native -->
+            <div class="datetime-section">
+                <div class="datetime-group">
+                    <label for="date-input">Pilih Tanggal</label>
+                    <div class="datetime-input">
+                        <input type="date" name="tanggal" id="date-input" value="2026-02-20" style="border:none; outline:none; font-size:15px; width:100%; color:var(--text-main); font-family:inherit; background:transparent;">
+                    </div>
+                </div>
+                <div class="datetime-group">
+                    <label for="time-input">Pilih Waktu</label>
+                    <div class="datetime-input">
+                        <input type="time" name="waktu" id="time-input" value="09:00" style="border:none; outline:none; font-size:15px; width:100%; color:var(--text-main); font-family:inherit; background:transparent;">
+                    </div>
+                </div>
+            </div>
+
+            <button type="submit" class="btn-primary w-100 mt-20" style="box-sizing:border-box;">Lanjutkan Pesanan</button>
+        </form>
+    <!-- Masukkan kembali JS kita -->
+    <script src="../js/pesanan.js"></script>
+    </main>
+</body>
+
+</html>
