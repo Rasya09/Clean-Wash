@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clean Wash - Alamat Saya</title>
+    <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="../css/alamatsaya.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="container nav-wrapper">
+            <div class="logo">
+                <img src="../assets/img/CW.png" alt="Clean Wash Logo" />
+            </div>
+            <nav class="nav-menu">
+                <a href="#" class="active">Beranda</a>
+                <a href="#">Cari Laundry</a>
+                <a href="#">Layanan</a>
+                <a href="#">Pesanan Saya</a>
+            </nav>
+            <div class="nav-actions">
+                <a href="#" class="btn-login">Login</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="layout">
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+            <div class="profile-banner"></div>
+            <div class="profile-avatar">
+                <img src="../Assets/Icon/Avatar.png" alt="Avatar" />
+            </div>
+            <div class="profile-info">
+                <h3 class="profile-name">Rizky Pratama</h3>
+                <p class="profile-email">rizky@example.com</p>
+                <span class="profile-badge">Customer Aktif</span>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="ProfileCustomer.html" class="nav-item">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+                    Profil Saya
+                </a>
+                <a href="AlamatSaya.html" class="nav-item active">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+                    Alamat Saya
+                </a>
+                <a href="#" class="nav-item">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/></svg>
+                    Riwayat Pesanan
+                </a>
+                <a href="#" class="nav-item">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                    Keamanan Akun
+                </a>
+                <a href="#" class="nav-item logout">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+                    Logout
+                </a>
+            </nav>
+        </aside>
+
+        <!-- KONTEN UTAMA -->
+        <main class="main-content">
+
+            <!-- Header halaman -->
+            <div class="page-header">
+                <div>
+                    <h1 class="page-title">Alamat Saya</h1>
+                    <p class="page-subtitle">Kelola semua alamat pickup dan pengiriman laundry Anda.</p>
+                </div>
+                <button class="btn-tambah">+ Tambah Alamat</button>
+            </div>
+
+            <!-- Statistik -->
+            <div class="stats-row">
+                <div class="stat-card">
+                    <div class="stat-icon red">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+                    </div>
+                    <div>
+                        <div class="stat-number">2</div>
+                        <div class="stat-label">Total Alamat</div>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon blue">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                    </div>
+                    <div>
+                        <div class="stat-number">1</div>
+                        <div class="stat-label">Alamat Utama</div>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon teal">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/><path d="M9 12l2 2 4-4"/></svg>
+                    </div>
+                    <div>
+                        <div class="stat-number">12</div>
+                        <div class="stat-label">Total Pesanan</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Search & Filter -->
+            <div class="search-filter-row">
+                <div class="search-box">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#aaa" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                    <input type="text" placeholder="Cari alamat..." />
+                </div>
+                <div class="filter-tabs">
+                    <button class="filter-tab active">Semua</button>
+                    <button class="filter-tab">Utama</button>
+                    <button class="filter-tab">Lainnya</button>
+                </div>
+            </div>
+
+            <!-- Grid Alamat -->
+            <div class="address-grid">
+
+                <!-- Alamat Utama -->
+                <div class="address-card primary">
+                    <div class="address-card-header">
+                        <div class="address-card-icon">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#6d93f2" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                        </div>
+                        <div>
+                            <div class="address-card-title">Rumah</div>
+                            <span class="badge-utama">&#9733; Alamat Utama</span>
+                        </div>
+                        <button class="btn-dots">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="5" r="1.5"/><circle cx="12" cy="12" r="1.5"/><circle cx="12" cy="19" r="1.5"/></svg>
+                        </button>
+                    </div>
+                    <p class="address-street">Jl. Soekarno Hatta No. 12</p>
+                    <p class="address-detail-text">Rajabasa, Bandar Lampung, 35142</p>
+                    <div class="address-tags">
+                        <span class="address-tag">
+                            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+                            Bandar Lampung
+                        </span>
+                        <span class="address-tag">
+                            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M7 8h10M7 12h5"/></svg>
+                            35142
+                        </span>
+                    </div>
+                    <div class="address-footer-btn">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        Alamat Utama
+                    </div>
+                </div>
+
+                <!-- Alamat Lainnya -->
+                <div class="address-card">
+                    <div class="address-card-header">
+                        <div class="address-card-icon gray">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#888" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-4 0v2"/><line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/></svg>
+                        </div>
+                        <div>
+                            <div class="address-card-title">Kos / Rumah Sewa</div>
+                            <span class="badge-lainnya">Alamat Lainnya</span>
+                        </div>
+                        <button class="btn-dots">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="5" r="1.5"/><circle cx="12" cy="12" r="1.5"/><circle cx="12" cy="19" r="1.5"/></svg>
+                        </button>
+                    </div>
+                    <p class="address-street">Jl. Melati No. 5</p>
+                    <p class="address-detail-text">Kedaton, Bandar Lampung, 35148</p>
+                    <div class="address-tags">
+                        <span class="address-tag">
+                            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/></svg>
+                            Bandar Lampung
+                        </span>
+                        <span class="address-tag">
+                            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M7 8h10M7 12h5"/></svg>
+                            35148
+                        </span>
+                    </div>
+                    <div class="address-footer-btn secondary">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        Jadikan Utama
+                    </div>
+                </div>
+
+            </div>
+
+        </main>
+    </div>
+
+</body>
+</html>

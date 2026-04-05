@@ -12,31 +12,46 @@
 <body>
     <div class="layout">
         <aside class="sidebar">
-            <div class="profile-card">
-                <div class="profile-banner"></div>
-                <div class="profile-avatar">
-                    <img src="../Assets/Icon/Avatar.png" alt="Avatar" />
-                </div>
-                <div class="profile-info">
-                    <h3 class="profile-name">Rizky Pratama</h3>
-                    <p class="profile-email">rizky@example.com</p>
-                    <span class="profile-badge">Customer Aktif</span>
-                </div>
-                <button class="hamburger" onclick="toggleNav()" aria-label="Toggle menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-            </div>
+    <div class="profile-card">
+        <div class="profile-banner"></div>
+        <div class="profile-avatar">
+            <img src="../Assets/Icon/Avatar.png" alt="Avatar" />
+        </div>
+        <div class="profile-info">
+            <h3 class="profile-name">Rizky Pratama</h3>
+            <p class="profile-email">rizky@example.com</p>
+            <span class="profile-badge">Customer Aktif</span>
+        </div>
+        <button class="hamburger" onclick="toggleNav()" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </div>
 
-            <nav class="sidebar-nav" id="sidebar-nav">
-                <a href="#" class="nav-item active">Profil Saya</a>
-                <a href="#" class="nav-item">Alamat Saya</a>
-                <a href="#" class="nav-item">Riwayat Pesanan</a>
-                <a href="#" class="nav-item">Keamanan Akun</a>
-                <a href="#" class="nav-item logout">Logout</a>
-            </nav>
-        </aside>
+    <nav class="sidebar-nav" id="sidebar-nav">
+        <a href="ProfileCustomer.html" class="nav-item active">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+            Profil Saya
+        </a>
+        <a href="AlamatSaya.html" class="nav-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+            Alamat Saya
+        </a>
+        <a href="#" class="nav-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/></svg>
+            Riwayat Pesanan
+        </a>
+        <a href="#" class="nav-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            Keamanan Akun
+        </a>
+        <a href="#" class="nav-item logout">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+            Logout
+        </a>
+    </nav>
+</aside>
 
         <main class="main-content">
             <div class="content-header">
