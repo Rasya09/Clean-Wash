@@ -4,25 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Detail Laundry</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="../css/detail-laundry.css">
 </head>
 <body>
-    <!--- NAVBAR --->
+    <!-- NAVBAR -->
     <header class="navbar">
         <div class="container nav-wrapper">
             <div class="logo">
                 <img src="../assets/img/CW.png" alt="Clean Wash Logo" />
             </div>
             <nav class="nav-menu">
-                <a href="#">Beranda</a>
-                <a href="#">Cari Laundry</a>
-                <a href="#">Layanan</a>
-                <a href="#">Pesanan Saya</a>
+                <a href="home.html">Beranda</a>
+                <a href="cari-laundry.html">Cari Laundry</a>
+                <a href="layanan.html">Layanan</a>
+                <a href="riwayat_pesanan.html">Pesanan Saya</a>
             </nav>
-            <div class="nav-actions">
-                <a href="#" class="btn-login">Login</a>
+            <div class="nav-profile">
+                <div class="nav-profile__avatar-wrap">
+                    <img src="../Assets/Icon/Avatar.png" alt="Rizky Pratama" class="nav-profile__avatar" />
+                    <div class="nav-profile__dropdown">
+                        <div class="nav-profile__info">
+                            <span class="nav-profile__name">Rizky Pratama</span>
+                            <span class="nav-profile__email"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="f2809b88998bb2978a939f829e97dc919d9f">[email&#160;protected]</a></span>
+                        </div>
+                        <div class="nav-profile__divider"></div>
+                        <a href="ProfileCustomer.html" class="nav-profile__item">
+                            <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                            Detail Profil
+                        </a>
+                        <a href="#" class="nav-profile__item nav-profile__item--logout">
+                            <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 21H5a2 2 0 01-2-2V5a2 2 0 012-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+                            Logout
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
     </header>
@@ -91,7 +110,7 @@
                         <div class="antar-jemput">
                             <p><i class="fa-solid fa-motorcycle"></i> Antar Jemput</p>
                         </div>
-                        <a href="#" class="btn-pesan">Pesan Sekarang</a>
+                        <a href="pesanan.html" class="btn-pesan">Pesan Sekarang</a>
                     </div>
                 </div>
             </section>

@@ -580,7 +580,7 @@ body {
     color: var(--text-dark);
 }
 
-.payment-info__val--unpaid { color: #e04040; }
+.payment-info__val--unpaid { color: #40e078; }
 
 .va-box {
     background: #f0f4ff;
