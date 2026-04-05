@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ringkasan Pesanan - Clean Wash</title>
+    <link rel="stylesheet" href="../css/pesanan.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="container nav-wrapper">
+            <div class="logo">
+                <img src="../assets/img/CW.png" alt="Clean Wash Logo" />
+            </div>
+            <nav class="nav-menu">
+                <a href="#">Beranda</a>
+                <a href="#">Cari Laundry</a>
+                <a href="#">Layanan</a>
+                <a href="#">Pesanan Saya</a>
+            </nav>
+            <div class="nav-actions">
+                <a href="#" class="btn-login">Login</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="page-modal-wrapper">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Ringkasan Pesanan</h2>
+            </div>
+            
+            <div class="modal-body">
+                <h3 class="laundry-name">Laundry MoLaundry</h3>
+                
+                <div class="order-details">
+                    <div class="detail-row">
+                        <span class="detail-label">Layanan:</span>
+                        <!-- Static values since JS dependency is removed -->
+                        <span class="detail-value" id="summary-layanan">Cuci Kiloan</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">Paket:</span>
+                        <span class="detail-value" id="summary-paket">Cuci + Setrika</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">Jadwal:</span>
+                        <span class="detail-value" id="summary-jadwal">20 Feb, 09.00</span>
+                    </div>
+                </div>
+
+                <div class="price-estimate">
+                    <span class="info-icon">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+                    </span>
+                    <span>Mulai dari <strong>Rp7.000/kg</strong></span>
+                </div>
+                
+                <div class="note-section">
+                    <label for="catatan">Catatan Tambahan</label>
+                    <textarea id="catatan" placeholder="Contoh: pisahkan pakaian putih, jangan gunakan pewangi, dll."></textarea>
+                </div>
+
+                <p class="disclaimer-text">
+                    Total akhir akan dikonfirmasi setelah laundry ditimbang oleh mitra laundry.
+                </p>
+            </div>
+
+            <div class="modal-footer">
+                <a href="pembayaran.html" class="btn-primary w-100" style="display:inline-block; text-decoration:none; box-sizing:border-box;">Lanjutkan Pembayaran</a>
+            </div>
+        </div>
+    </main>
+    <script src="../js/pesanan.js"></script>
+</body>
+</html>

@@ -123,10 +123,10 @@
                 </div>
 
                 <div class="action-section">
-                    <button class="btn-primary">
+                    <a href="#" id="btn-lanjut" class="btn-primary" style="text-decoration: none;">
                         Lanjutkan Pembayaran
                         <span class="material-symbols-outlined icon">arrow_forward</span>
-                    </button>
+                    </a>
 
                     <p class="security-note">Aman &amp; Terenkripsi. 256-bit SSL Protection.</p>
                     <p class="terms-note">
@@ -137,137 +137,20 @@
         </div>
     </main>
 
-    <!-- Modal Overlay -->
-    <div id="payment-modal" class="modal-overlay">
-        <div class="modal-container">
-            <div class="modal-header">
-                <h2>Pilih Pembayaran Instan</h2>
-                <button id="close-modal" class="btn-close-modal">
-                    <span class="material-symbols-outlined">close</span>
-                </button>
-            </div>
-            <div class="modal-content">
-                <!-- Section 1: Transfer Bank -->
-                <div class="modal-section-v2">
-                    <div class="section-header">
-                        <span class="material-symbols-outlined icon">account_balance</span>
-                        <h3>Transfer Bank</h3>
-                    </div>
-                    
-                    <div class="bank-card">
-                        <div class="bank-card-content">
-                            <div class="bank-card-top">
-                                <div>
-                                    <p class="bank-label">Bank BCA</p>
-                                    <p class="bank-number">123456789</p>
-                                </div>
-                                <button class="btn-copy">Copy</button>
-                            </div>
-                            <div class="bank-card-bottom">
-                                <p class="bank-label">Atas Nama</p>
-                                <p class="bank-name">Laundry MoLAUNDRY</p>
-                            </div>
-                        </div>
-                    </div>
-                    <p class="transfer-subtext">
-                        Silakan transfer sesuai nominal total hingga 3 digit terakhir untuk verifikasi otomatis yang lebih cepat.
-                    </p>
-                </div>
-                
-                <!-- Section 2: QRIS -->
-                <div class="modal-section-v2">
-                    <div class="section-header">
-                        <span class="material-symbols-outlined icon">qr_code_2</span>
-                        <h3>QRIS</h3>
-                    </div>
-                    <div class="qris-card">
-                        <div class="qris-img-bg">
-                            <img alt="QRIS Payment Code" src="../assets/img/QRIS.png" />
-                        </div>
-                        <div class="qris-text">
-                            <p class="qris-name">Laundry MoLAUNDRY</p>
-                            <p class="qris-nmid">NMID: ID1234567890</p>
-                        </div>
-                    </div>
-                    <div class="scan-divider">
-                        <div></div>
-                        <span>Scan to Pay</span>
-                        <div></div>
-                    </div>
-                </div>
-
-                <!-- Section 3: Upload Proof -->
-                <div class="modal-section-v2">
-                    <div class="section-header">
-                        <span class="material-symbols-outlined icon">cloud_upload</span>
-                        <h3>Unggah Bukti Pembayaran</h3>
-                    </div>
-                    
-                    <label class="upload-dropzone" id="upload-dropzone-label">
-                        <div class="upload-dropzone-content">
-                            <span class="material-symbols-outlined icon-large" id="upload-icon-preview">image</span>
-                            <p class="upload-title" id="upload-text-preview">Klik untuk unggah atau seret file</p>
-                            <p class="upload-subtitle" id="upload-subtext-preview">PNG, JPG atau PDF (Maks. 5MB)</p>
-                        </div>
-                        <input id="proof-upload" accept="image/*,application/pdf" class="hidden-input" type="file" />
-                    </label>
-                    <p class="upload-info">
-                        <span class="material-symbols-outlined">info</span>
-                        Pastikan bukti transfer terlihat jelas dan terbaca.
-                    </p>
-                </div>
-            </div>
-
-            <!-- Modal Footer -->
-            <div class="modal-footer-v2">
-                <button class="btn-primary-gradient" id="btn-confirm-online">
-                    Konfirmasi Pembayaran
-                </button>
-                <p class="security-text">
-                    Payment is secured and encrypted.
-                </p>
-            </div>
-        </div>
-    </div>
-
-    <!-- Success Modal Overlay -->
-    <div id="success-modal" class="modal-overlay">
-        <div class="success-modal-container">
-            <div class="success-bg-shape-1"></div>
-            <div class="success-bg-shape-2"></div>
+    <script>
+        document.getElementById('btn-lanjut').addEventListener('click', function(e) {
+            e.preventDefault();
+            const selectedMethod = document.querySelector('input[name="payment_method"]:checked');
             
-            <div class="success-icon-wrapper">
-                <div class="success-icon-bg">
-                    <span class="material-symbols-outlined icon">check_circle</span>
-                </div>
-                <div class="success-ripple"></div>
-            </div>
-            
-            <h1 class="success-title">Pembayaran Dikonfirmasi!</h1>
-            <p id="success-desc" class="success-desc">
-                Terima kasih! Pilihan pembayaran Anda telah disimpan. Proses pencucian akan segera dimulai.
-            </p>
-            
-            <div class="success-details">
-                <div class="success-detail-card">
-                    <div class="success-detail-icon">
-                        <span class="material-symbols-outlined icon">payments</span>
-                    </div>
-                    <div class="success-detail-text">
-                        <label>Metode</label>
-                        <p id="success-method">Bayar Nanti (COD)</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="success-actions">
-                <button class="btn-primary-pill">Lihat Pesanan Saya</button>
-                <button id="btn-back-home" class="btn-secondary">Kembali ke Beranda</button>
-            </div>
-        </div>
-    </div>
-
-    <script src="../js/pembayaran.js"></script>
+            if (selectedMethod) {
+                if (selectedMethod.value === 'online') {
+                    window.location.href = 'transfer.html';
+                } else if (selectedMethod.value === 'cod') {
+                    window.location.href = 'berhasil.html';
+                }
+            }
+        });
+    </script>
 </body>
 
 </html>

@@ -1,20 +1,23 @@
 document.addEventListener('DOMContentLoaded', function() {
     const uploadBox = document.getElementById('upload-box');
     const fileInput = document.getElementById('foto-barang');
-    const uploadHint = uploadBox.querySelector('.upload-hint');
-    const uploadText = uploadBox.querySelector('span:first-child');
+    const uploadHint = document.getElementById('upload-hint');
+    const uploadText = document.getElementById('upload-text');
 
-    uploadBox.addEventListener('click', function() {
-        fileInput.click();
-    });
+    if (uploadBox && fileInput) {
+        uploadBox.addEventListener('click', function() {
+            fileInput.click();
+        });
 
-    fileInput.addEventListener('change', function(e) {
-        if (e.target.files.length > 0) {
-            uploadText.textContent = 'File Terpilih:';
-            uploadHint.textContent = e.target.files[0].name;
-            uploadBox.style.borderColor = '#1a56db';
-        }
-    });
+        fileInput.addEventListener('change', function(e) {
+            if (e.target.files.length > 0) {
+                if (uploadText) uploadText.textContent = 'File Foto Anda:';
+                if (uploadHint) uploadHint.textContent = e.target.files[0].name;
+                uploadBox.style.borderColor = '#6d93f2';
+                uploadBox.style.backgroundColor = '#eaeffc';
+            }
+        });
+    }
 
     const layananContainer = document.getElementById('layanan-container');
     const btnTambahPesanan = document.getElementById('btn-tambah-pesanan');
@@ -43,16 +46,16 @@ document.addEventListener('DOMContentLoaded', function() {
                         if (type === 'Cuci Kiloan' || type === 'Cuci Satuan') {
                             paketSection.style.display = 'block';
                             innerButtons = `
-                                <button class="layanan-btn">Cuci Saja</button>
-                                <button class="layanan-btn">Cuci + Setrika</button>
-                                <button class="layanan-btn">Express</button>
+                                <button type="button" class="layanan-btn">Cuci Saja</button>
+                                <button type="button" class="layanan-btn">Cuci + Setrika</button>
+                                <button type="button" class="layanan-btn">Express</button>
                             `;
                         } else if (type === 'Cuci Karpet' || type === 'Cuci Tas') {
                             paketSection.style.display = 'block';
                             innerButtons = `
-                                <button class="layanan-btn">Kecil</button>
-                                <button class="layanan-btn">Sedang</button>
-                                <button class="layanan-btn">Besar</button>
+                                <button type="button" class="layanan-btn">Kecil</button>
+                                <button type="button" class="layanan-btn">Sedang</button>
+                                <button type="button" class="layanan-btn">Besar</button>
                             `;
                         } else if (type === 'Cuci Sepatu') {
                             paketSection.style.display = 'none';
@@ -72,6 +75,13 @@ document.addEventListener('DOMContentLoaded', function() {
                 
                 if (semuaGroup.length > 1) {
                     groupToRemove.remove();
+                    // Rename sequentially 
+                    document.querySelectorAll('.layanan-group').forEach((g, index) => {
+                       const h3 = g.querySelector('h3');
+                       if (h3 && h3.textContent.startsWith('Pilih Layanan')) {
+                            h3.textContent = index === 0 ? 'Pilih Layanan' : `Pilih Layanan ${index + 1}`;
+                       }
+                    });
                 }
             }
         });
@@ -79,9 +89,26 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if (btnTambahPesanan) {
         btnTambahPesanan.addEventListener('click', function() {
-            const firstGroup = document.querySelector('.layanan-group');
+            const groups = document.querySelectorAll('.layanan-group');
+            const newIndex = groups.length + 1;
+            
+            const firstGroup = groups[0];
             if (firstGroup) {
                 const clone = firstGroup.cloneNode(true);
+                
+                const h3 = clone.querySelector('h3');
+                if (h3) h3.textContent = `Pilih Layanan ${newIndex}`;
+                
+                // Tampilkan border top di CSS style khusus clone lewat kode inline gampang
+                clone.style.borderTop = '1.5px dashed #e0e6ed';
+                clone.style.paddingTop = '24px';
+                clone.style.marginTop = '8px';
+
+                // Ensure the remove button will be visible for cloned
+                const removeBtn = clone.querySelector('.btn-remove-layanan');
+                if(removeBtn) {
+                    removeBtn.style.display = 'flex';
+                }
 
                 const mainOptions = clone.querySelector('.main-layanan-options');
                 if (mainOptions) {
@@ -97,9 +124,9 @@ document.addEventListener('DOMContentLoaded', function() {
                     const optionDiv = paketSection.querySelector('.layanan-options');
                     if (optionDiv) {
                         optionDiv.innerHTML = `
-                            <button class="layanan-btn">Cuci Saja</button>
-                            <button class="layanan-btn">Cuci + Setrika</button>
-                            <button class="layanan-btn">Express</button>
+                            <button type="button" class="layanan-btn">Cuci Saja</button>
+                            <button type="button" class="layanan-btn">Cuci + Setrika</button>
+                            <button type="button" class="layanan-btn">Express</button>
                         `;
                     }
                 }
@@ -110,107 +137,48 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Modal Pesanan Handling
-    const modal = document.getElementById('pesananModal');
-    const openBtn = document.getElementById('openModalBtn');
-    const closeBtn = document.getElementById('closeModalBtn');
+    // Capture pesanan and save to local storage on submit
+    const orderForm = document.querySelector('.order-form');
+    if (orderForm) {
+        orderForm.addEventListener('submit', function(e) {
+            const layananTerpilih = [];
+            const paketTerpilih = [];
 
-    if (openBtn && modal) {
-        openBtn.addEventListener('click', function() {
-            const mainBtns = document.querySelectorAll('.main-layanan-options .layanan-btn.active');
-            const arrayLayanan = [];
-            for (let i = 0; i < mainBtns.length; i++) {
-                arrayLayanan.push(mainBtns[i].textContent.trim());
-            }
-
-            const paketBtns = document.querySelectorAll('.paket-section .layanan-btn.active');
-            const arrayPaket = [];
-            for (let i = 0; i < paketBtns.length; i++) {
-                arrayPaket.push(paketBtns[i].textContent.trim());
-            }
-
-            const summaryLayanan = document.getElementById('summary-layanan');
-            if (summaryLayanan) {
-                if (arrayLayanan.length > 0) {
-                    summaryLayanan.textContent = arrayLayanan.join(', ');
-                } else {
-                    summaryLayanan.textContent = 'Belum Dipilih';
+            document.querySelectorAll('.layanan-group').forEach(group => {
+                const activeLayanan = group.querySelector('.main-layanan-options .layanan-btn.active');
+                if (activeLayanan) {
+                    layananTerpilih.push(activeLayanan.textContent.trim());
                 }
-            }
 
-            const summaryPaket = document.getElementById('summary-paket');
-            if (summaryPaket) {
-                if (arrayPaket.length > 0) {
-                    summaryPaket.textContent = arrayPaket.join(', ');
-                } else {
-                    summaryPaket.textContent = '-';
-                }
-            }
+                // Periksa paket-section yang terbuka di grup ini
+                const activeSections = group.querySelectorAll('.paket-section');
+                activeSections.forEach(section => {
+                    if (section.style.display === 'block') {
+                        const activePaket = section.querySelector('.layanan-btn.active');
+                        if (activePaket) {
+                            paketTerpilih.push(activePaket.textContent.trim());
+                        }
+                    }
+                });
+            });
 
-            const summaryJadwal = document.getElementById('summary-jadwal');
-            const dateElem = document.getElementById('date-text');
-            const timeElem = document.getElementById('time-text');
-            
-            let dateText = "-";
-            if (dateElem) {
-                dateText = dateElem.textContent.trim();
-            }
+            const tgl = document.getElementById('date-input') ? document.getElementById('date-input').value : '';
+            const wkt = document.getElementById('time-input') ? document.getElementById('time-input').value : '';
 
-            let timeText = "-";
-            if (timeElem) {
-                timeText = timeElem.textContent.trim();
-            }
-
-            if (summaryJadwal) {
-                summaryJadwal.textContent = dateText + ", " + timeText;
-            }
-
-            modal.style.display = 'flex';
+            localStorage.setItem('layanan', layananTerpilih.length > 0 ? layananTerpilih.join(', ') : 'Belum Dipilih');
+            localStorage.setItem('paket', paketTerpilih.length > 0 ? paketTerpilih.join(', ') : '-');
+            localStorage.setItem('jadwal', `${tgl}, ${wkt}`);
         });
     }
 
-    if (closeBtn && modal) {
-        closeBtn.addEventListener('click', function() {
-            modal.style.display = 'none';
-        });
-    }
+    // Read local storage in ringkasan page
+    const summaryLayanan = document.getElementById('summary-layanan');
+    const summaryPaket = document.getElementById('summary-paket');
+    const summaryJadwal = document.getElementById('summary-jadwal');
 
-    if (modal) {
-        modal.addEventListener('click', function(e) {
-            if (e.target === modal) {
-                modal.style.display = 'none';
-            }
-        });
-    }
-
-    // Handling simulated Date Time inputs
-    const dateBtn = document.getElementById('date-picker-btn');
-    const dateInput = document.getElementById('date-input');
-    const dateTextLabel = document.getElementById('date-text');
-
-    if (dateBtn) {
-        dateBtn.addEventListener('click', function() {
-            if (dateInput.showPicker) {
-                dateInput.showPicker();
-            }
-        });
-        dateInput.addEventListener('change', function(e) {
-            dateTextLabel.textContent = e.target.value; 
-        });
-    }
-
-    const timeBtn = document.getElementById('time-picker-btn');
-    const timeInput = document.getElementById('time-input');
-    const timeTextLabel = document.getElementById('time-text');
-
-    if (timeBtn) {
-        timeBtn.addEventListener('click', function() {
-            if (timeInput.showPicker) {
-                timeInput.showPicker();
-            }
-        });
-        timeInput.addEventListener('change', function(e) {
-            timeTextLabel.textContent = e.target.value;
-        });
+    if (summaryLayanan && summaryPaket && summaryJadwal) {
+        summaryLayanan.textContent = localStorage.getItem('layanan') || 'Belum Dipilih';
+        summaryPaket.textContent = localStorage.getItem('paket') || '-';
+        summaryJadwal.textContent = localStorage.getItem('jadwal') || '-';
     }
 });
