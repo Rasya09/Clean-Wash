@@ -16,16 +16,24 @@ document.addEventListener('DOMContentLoaded', function () {
         // Event listener for proceeding from main page
         btnLanjutkan.addEventListener('click', function (e) {
             e.preventDefault();
+            
             const selectedMethodRadio = document.querySelector('input[name="payment_method"]:checked');
+            
             if (selectedMethodRadio) {
                 const selectedMethod = selectedMethodRadio.value;
+                
                 if (selectedMethod === 'online') {
-                    paymentModal.classList.add('active')
+                    paymentModal.classList.add('active');
                     if (btnKonfirmasiOnline && proofUploadInput) {
                         proofUploadInput.value = '';
                         btnKonfirmasiOnline.disabled = true;
-                        if (uploadTextPreview) uploadTextPreview.innerText = 'Klik untuk unggah atau seret file';
-                        if (uploadIconPreview) uploadIconPreview.innerText = 'image';
+                        
+                        if (uploadTextPreview) {
+                            uploadTextPreview.innerText = 'Klik untuk unggah atau seret file';
+                        }
+                        if (uploadIconPreview) {
+                            uploadIconPreview.innerText = 'image';
+                        }
                     }
                 } else {
                     successMethodText.innerText = 'Bayar Nanti (COD)';
@@ -38,14 +46,24 @@ document.addEventListener('DOMContentLoaded', function () {
         // Event listener for proof upload input
         if (proofUploadInput && btnKonfirmasiOnline) {
             proofUploadInput.addEventListener('change', function () {
-                if (this.files && this.files.length > 0) {
+                if (this.files.length > 0) {
                     btnKonfirmasiOnline.disabled = false;
-                    if (uploadTextPreview) uploadTextPreview.innerText = this.files[0].name;
-                    if (uploadIconPreview) uploadIconPreview.innerText = 'check_circle';
+                    
+                    if (uploadTextPreview) {
+                        uploadTextPreview.innerText = this.files[0].name;
+                    }
+                    if (uploadIconPreview) {
+                        uploadIconPreview.innerText = 'check_circle';
+                    }
                 } else {
                     btnKonfirmasiOnline.disabled = true;
-                    if (uploadTextPreview) uploadTextPreview.innerText = 'Klik untuk unggah atau seret file';
-                    if (uploadIconPreview) uploadIconPreview.innerText = 'image';
+                    
+                    if (uploadTextPreview) {
+                        uploadTextPreview.innerText = 'Klik untuk unggah atau seret file';
+                    }
+                    if (uploadIconPreview) {
+                        uploadIconPreview.innerText = 'image';
+                    }
                 }
             });
         }
@@ -54,7 +72,11 @@ document.addEventListener('DOMContentLoaded', function () {
         if (btnKonfirmasiOnline) {
             btnKonfirmasiOnline.addEventListener('click', function (e) {
                 e.preventDefault();
-                if (btnKonfirmasiOnline.disabled) return;
+                
+                if (btnKonfirmasiOnline.disabled === true) {
+                    return;
+                }
+                
                 paymentModal.classList.remove('active');
                 successMethodText.innerText = 'Bayar Sekarang';
                 successDescText.innerText = 'Terima kasih! Pembayaran Anda telah berhasil diverifikasi. Proses pencucian akan segera dimulai.';

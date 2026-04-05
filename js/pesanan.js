@@ -1,18 +1,18 @@
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', function() {
     const uploadBox = document.getElementById('upload-box');
     const fileInput = document.getElementById('foto-barang');
     const uploadHint = uploadBox.querySelector('.upload-hint');
     const uploadText = uploadBox.querySelector('span:first-child');
 
-    uploadBox.addEventListener('click', () => {
+    uploadBox.addEventListener('click', function() {
         fileInput.click();
     });
 
-    fileInput.addEventListener('change', (e) => {
-        if (e.target.files && e.target.files.length > 0) {
+    fileInput.addEventListener('change', function(e) {
+        if (e.target.files.length > 0) {
             uploadText.textContent = 'File Terpilih:';
             uploadHint.textContent = e.target.files[0].name;
-            uploadBox.style.borderColor = 'var(--primary)';
+            uploadBox.style.borderColor = '#1a56db';
         }
     });
 
@@ -20,11 +20,15 @@ document.addEventListener('DOMContentLoaded', () => {
     const btnTambahPesanan = document.getElementById('btn-tambah-pesanan');
 
     if (layananContainer) {
-        layananContainer.addEventListener('click', (e) => {
+        layananContainer.addEventListener('click', function(e) {
             if (e.target.classList.contains('layanan-btn')) {
                 const optionsContainer = e.target.closest('.layanan-options');
                 const btns = optionsContainer.querySelectorAll('.layanan-btn');
-                btns.forEach(b => b.classList.remove('active'));
+                
+                for (let i = 0; i < btns.length; i++) {
+                    btns[i].classList.remove('active');
+                }
+                
                 e.target.classList.add('active');
 
                 if (optionsContainer.classList.contains('main-layanan-options')) {
@@ -64,7 +68,9 @@ document.addEventListener('DOMContentLoaded', () => {
             const removeBtn = e.target.closest('.btn-remove-layanan');
             if (removeBtn) {
                 const groupToRemove = removeBtn.closest('.layanan-group');
-                if (document.querySelectorAll('.layanan-group').length > 1) {
+                const semuaGroup = document.querySelectorAll('.layanan-group');
+                
+                if (semuaGroup.length > 1) {
                     groupToRemove.remove();
                 }
             }
@@ -72,7 +78,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     if (btnTambahPesanan) {
-        btnTambahPesanan.addEventListener('click', () => {
+        btnTambahPesanan.addEventListener('click', function() {
             const firstGroup = document.querySelector('.layanan-group');
             if (firstGroup) {
                 const clone = firstGroup.cloneNode(true);
@@ -80,7 +86,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 const mainOptions = clone.querySelector('.main-layanan-options');
                 if (mainOptions) {
                     const mainBtns = mainOptions.querySelectorAll('.layanan-btn');
-                    mainBtns.forEach(b => b.classList.remove('active'));
+                    for (let i = 0; i < mainBtns.length; i++) {
+                        mainBtns[i].classList.remove('active');
+                    }
                 }
 
                 const paketSection = clone.querySelector('.paket-section');
@@ -108,31 +116,67 @@ document.addEventListener('DOMContentLoaded', () => {
     const closeBtn = document.getElementById('closeModalBtn');
 
     if (openBtn && modal) {
-        openBtn.addEventListener('click', () => {
-            const activeLayanan = Array.from(document.querySelectorAll('.main-layanan-options .layanan-btn.active')).map(btn => btn.textContent.trim());
-            const activePaket = Array.from(document.querySelectorAll('.paket-section .layanan-btn.active')).map(btn => btn.textContent.trim());
+        openBtn.addEventListener('click', function() {
+            const mainBtns = document.querySelectorAll('.main-layanan-options .layanan-btn.active');
+            const arrayLayanan = [];
+            for (let i = 0; i < mainBtns.length; i++) {
+                arrayLayanan.push(mainBtns[i].textContent.trim());
+            }
+
+            const paketBtns = document.querySelectorAll('.paket-section .layanan-btn.active');
+            const arrayPaket = [];
+            for (let i = 0; i < paketBtns.length; i++) {
+                arrayPaket.push(paketBtns[i].textContent.trim());
+            }
+
             const summaryLayanan = document.getElementById('summary-layanan');
+            if (summaryLayanan) {
+                if (arrayLayanan.length > 0) {
+                    summaryLayanan.textContent = arrayLayanan.join(', ');
+                } else {
+                    summaryLayanan.textContent = 'Belum Dipilih';
+                }
+            }
+
             const summaryPaket = document.getElementById('summary-paket');
+            if (summaryPaket) {
+                if (arrayPaket.length > 0) {
+                    summaryPaket.textContent = arrayPaket.join(', ');
+                } else {
+                    summaryPaket.textContent = '-';
+                }
+            }
+
             const summaryJadwal = document.getElementById('summary-jadwal');
-            const dateText = document.getElementById('date-text') ? document.getElementById('date-text').textContent.trim() : '-';
-            const timeText = document.getElementById('time-text') ? document.getElementById('time-text').textContent.trim() : '-';
+            const dateElem = document.getElementById('date-text');
+            const timeElem = document.getElementById('time-text');
             
-            if (summaryLayanan) summaryLayanan.textContent = activeLayanan.length > 0 ? activeLayanan.join(', ') : 'Belum Dipilih';
-            if (summaryPaket) summaryPaket.textContent = activePaket.length > 0 ? activePaket.join(', ') : '-';
-            if (summaryJadwal) summaryJadwal.textContent = `${dateText}, ${timeText}`;
+            let dateText = "-";
+            if (dateElem) {
+                dateText = dateElem.textContent.trim();
+            }
+
+            let timeText = "-";
+            if (timeElem) {
+                timeText = timeElem.textContent.trim();
+            }
+
+            if (summaryJadwal) {
+                summaryJadwal.textContent = dateText + ", " + timeText;
+            }
 
             modal.style.display = 'flex';
         });
     }
 
     if (closeBtn && modal) {
-        closeBtn.addEventListener('click', () => {
+        closeBtn.addEventListener('click', function() {
             modal.style.display = 'none';
         });
     }
 
     if (modal) {
-        modal.addEventListener('click', (e) => {
+        modal.addEventListener('click', function(e) {
             if (e.target === modal) {
                 modal.style.display = 'none';
             }
@@ -142,31 +186,31 @@ document.addEventListener('DOMContentLoaded', () => {
     // Handling simulated Date Time inputs
     const dateBtn = document.getElementById('date-picker-btn');
     const dateInput = document.getElementById('date-input');
-    const dateText = document.getElementById('date-text');
+    const dateTextLabel = document.getElementById('date-text');
 
-    if(dateBtn) {
-        dateBtn.addEventListener('click', () => {
-            if (typeof dateInput.showPicker === 'function') {
+    if (dateBtn) {
+        dateBtn.addEventListener('click', function() {
+            if (dateInput.showPicker) {
                 dateInput.showPicker();
             }
         });
-        dateInput.addEventListener('change', (e) => {
-            dateText.textContent = e.target.value; 
+        dateInput.addEventListener('change', function(e) {
+            dateTextLabel.textContent = e.target.value; 
         });
     }
 
     const timeBtn = document.getElementById('time-picker-btn');
     const timeInput = document.getElementById('time-input');
-    const timeText = document.getElementById('time-text');
+    const timeTextLabel = document.getElementById('time-text');
 
-    if(timeBtn) {
-        timeBtn.addEventListener('click', () => {
-            if (typeof timeInput.showPicker === 'function') {
+    if (timeBtn) {
+        timeBtn.addEventListener('click', function() {
+            if (timeInput.showPicker) {
                 timeInput.showPicker();
             }
         });
-        timeInput.addEventListener('change', (e) => {
-            timeText.textContent = e.target.value;
+        timeInput.addEventListener('change', function(e) {
+            timeTextLabel.textContent = e.target.value;
         });
     }
 });
